@@ -1,7 +1,7 @@
 {
-  "name": "ember-firebase-base",
+  "name": "igniteit",
   "version": "0.0.0",
-  "description": "Small description for firebase-test goes here",
+  "description": "Small description for igniteit goes here",
   "private": true,
   "directories": {
     "doc": "doc",

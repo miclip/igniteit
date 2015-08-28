@@ -1,8 +1,8 @@
-# ember-firebase-base
-[![Build Status](https://travis-ci.org/miclip/ember-firebase-base.svg?branch=master)](https://travis-ci.org/miclip/ember-firebase-base)
-[![Code Climate](https://codeclimate.com/github/miclip/ember-firebase-base/badges/gpa.svg)](https://codeclimate.com/github/miclip/ember-firebase-base)
+# igniteit
+[![Build Status](https://travis-ci.org/miclip/igniteit.svg?branch=master)](https://travis-ci.org/miclip/igniteit)
+[![Code Climate](https://codeclimate.com/github/miclip/igniteit/badges/gpa.svg)](https://codeclimate.com/github/miclip/igniteit)
 
-Base project Ember and Firebase.
+Igniteit 
 
 Uses:
 * Ember 2.0.1

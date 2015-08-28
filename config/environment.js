@@ -2,11 +2,11 @@
 
 module.exports = function(environment) {
   var ENV = {
-    modulePrefix: 'ember-firebase-base',
+    modulePrefix: 'igniteit',
     environment: environment,
     baseURL: '/',
     locationType: 'auto',
-    firebase: 'https://fiery-torch-673.firebaseio.com/',
+    firebase: 'https://igniteit.firebaseio.com/',
     torii: {
       sessionServiceName: 'session'
     },

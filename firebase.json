@@ -1,5 +1,5 @@
 {
-  "firebase": "fiery-torch-673",
+  "firebase": "igniteit",
   "public": "dist",
   "ignore": [
     "firebase.json",
