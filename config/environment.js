@@ -6,7 +6,7 @@ module.exports = function(environment) {
     environment: environment,
     baseURL: '/',
     locationType: 'auto',
-    firebase: 'https://igniteit.firebaseio.com/',
+    firebase: 'https://igniteit-dev.firebaseio.com/',
     torii: {
       sessionServiceName: 'session'
     },
