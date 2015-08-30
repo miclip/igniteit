@@ -6,14 +6,31 @@ var Router = Ember.Router.extend({
 });
 
 Router.map(function() {
-	this.route('register' , { path: '/register' });
-	this.route('login', { path: '/login' });
-	this.route('reset', { path: '/reset' });
-  this.resource('account',{ path: '/account' }, function(){
-		this.route('password');
-		this.route('manage');
-		this.route('delete');
-		
+  this.route('register' , { path: '/register' });
+  this.route('login', { path: '/login' });
+  this.route('reset', { path: '/reset' });
+  this.route('dashboard', { resetNamespace: true }, function () {
+    this.route('organizations', function() {
+      this.route('edit',{path: 'edit/:id'});
+      this.route('delete',{path: 'delete/:id'});
+      this.route('add');
+      this.route('details');
+    });
+    this.route('facilities');
+    this.route('trainers');
+    this.route('clients');
+    this.route('rates');
+    this.route('packages');
+    this.route('sessions');
+    this.route('today');
   });
+  this.route('account', { resetNamespace: true }, function () {
+    this.route('password');
+    this.route('manage');
+    this.route('delete');
+  });
+  
 });
 export default Router;
+
+

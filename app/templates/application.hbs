@@ -1,13 +1,13 @@
 <header>
    <h1>
-    {{#link-to "index"}}<strong>Ignite</strong>It·io{{/link-to}}
+    {{#link-to "index"}}<strong>ignite</strong>it·io{{/link-to}}
   </h1>
-  <nav>
+  <nav class="navbar-fixed">
   	{{#unless session.currentUser}}
       {{#link-to "register"}}Register{{/link-to}}     
     {{/unless}}
     {{#if session.currentUser}}
-   
+       {{#link-to "dashboard"}}Dashboard{{/link-to}}
        {{#link-to "account.manage"}}Account{{/link-to}}
        <a class="ember-view" href="" {{action 'signOut'}}>Logout</a>
         {{gravatar-image email=session.currentUser.email 
@@ -19,14 +19,7 @@
     {{/if}}
   </nav>
 </header>
-<section class="main-content ">
-  <div class="container">
-    <div class="row">
-      <div class="col-md-12">
-        <br/>
-        {{outlet}}
-      </div>      
-    </div>
-  </div>
+<section class="main-content ">       
+    {{outlet}} 
 </section>
 

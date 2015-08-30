@@ -20,21 +20,29 @@ validations: {
 actions:{
 	signIn: function(model) {
 		var self = this;
- 		self.setProperties({
-    	isProcessing: true,
-    });
-	 	var email = model.get('email');
-	  console.log("email:"+email);
+ 		self.set('isProcessing',true);
+	 	var email = model.get('email');	  
 	  var password = model.get('password');
 	  self.validate().then(function(){
+
 	  	self.get("session").open("firebase", { 
+
 		  	provider: "password", 
 		  	email:email, 
 		  	password:password, 
 		  	session: "sessionOnly"}).then(function() {
-		  		model.destroyRecord();
-		  		self.transitionTo("index");
+
+		  		var previousTransition = self.get('previousTransition');
+
+		  		if (previousTransition) {
+		        previousTransition.retry();
+		        return;
+          }
+
+		  		self.transitionToRoute("dashboard");
+
     }).catch(function(err){
+
 			switch (err.code) {
 				case "INVALID_EMAIL":
 					model.get('errors').add('email', 'User not found');

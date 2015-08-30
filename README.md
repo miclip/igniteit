@@ -1,8 +1,8 @@
-# igniteit
+# igniteit.io
 [![Build Status](https://travis-ci.org/miclip/igniteit.svg?branch=master)](https://travis-ci.org/miclip/igniteit)
 [![Code Climate](https://codeclimate.com/github/miclip/igniteit/badges/gpa.svg)](https://codeclimate.com/github/miclip/igniteit)
 
-Igniteit 
+Igniteit.io
 
 Uses:
 * Ember 2.0.1

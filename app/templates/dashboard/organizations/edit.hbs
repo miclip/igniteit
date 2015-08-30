@@ -1,0 +1,13 @@
+	<form {{action 'save' model on="submit" }}>
+			<h2>Edit</h2>
+			{{#if model.errors}}
+				{{display-errors errors=model.errors}}
+			{{/if}}
+			{{validated-input-group type="text" placeholder="Enter name" required="true" name="name" hasValidationErrors=hasValidationErrors labelText="Name:" value=model.name errors=errors.validationModel.name}}
+			{{validated-input-group type="url" placeholder="Website" name="website" hasValidationErrors=hasValidationErrors labelText="Website:" value=model.website errors=errors.validationModel.website}}
+			
+			<button class="btn btn-primary" type='submit'>Save Organization</button>
+			{{#link-to "dashboard.organizations" class="btn btn-link"}}Cancel{{/link-to}}
+</form>
+
+

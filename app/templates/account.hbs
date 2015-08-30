@@ -1,3 +1,4 @@
+<div class="container">
 <div class="row">
 		<div class="col-md-12">
 			<br/>
@@ -14,9 +15,6 @@
 		<div class="col-md-10">
 			
 			<ul class="nav nav-pills ">
-				{{!-- {{#link-to "account.manage" role="presentation" tagName="li" class='nav-item' href=false}}<a class='nav-link' {{href:view.href}}>Manage Account</a>{{/link-to}}
-				{{#link-to "account.password" role="presentation" tagName="li" class='nav-item' href=false}}<a class='nav-link' {{href:view.href}}>Change Password</a>{{/link-to}}
-				{{#link-to "account.delete" role="presentation" tagName="li" class='nav-item' href=false}}<a class='nav-link' {{href:view.href}}>Delete Account</a>{{/link-to}} --}}
 					<li class="nav-item">
 						{{#link-to "account.manage" class='nav-link'}}Manage Account{{/link-to}}
 					</li>
@@ -30,6 +28,7 @@
 		</div>		
 	</div>
 	<hr>
+	
 {{outlet}}
-
+</div>
 
