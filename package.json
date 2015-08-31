@@ -44,6 +44,7 @@
   },
   "dependencies": {
     "broccoli-merge-trees": "^0.2.3",
+    "ember-cli-notifications": "^2.1.2",
     "ember-cli-sass": "^4.2.0"
   }
 }

@@ -18,5 +18,3 @@ export default DS.Transform.extend({
     }
   }
 });
-
-//App.register("transform:array", DS.ArrayTransform);
