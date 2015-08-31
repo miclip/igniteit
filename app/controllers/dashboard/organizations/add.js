@@ -21,11 +21,12 @@ actions:{
 			var self = this;
 			self.validate().then(function(){
 				model.save().then(function(){
-				// 		self.notifications.addNotification({
-    //   message: 'Saved successfully!',
-    //   type: 'success'
-    // });
-						self.transitionToRoute('dashboard.organizations.index');
+						self.notifications.addNotification({
+			      message: 'Saved successfully!',
+			      type: 'success',
+			      autoClear: true,
+    });
+						//self.transitionToRoute('dashboard.organizations.index');
 				}).catch(function(err){
 					console.log("errors:"+err);
 				});

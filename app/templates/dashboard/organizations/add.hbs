@@ -1,3 +1,9 @@
+	<div class="c-notification__container">
+  {{#each notifications as |notification|}}
+    {{notification-message notification=notification}}
+  {{/each}}
+</div>
+
 	<form {{action 'save' model on="submit" }}>
 			<h2>Add</h2>
 			{{#if model.errors}}
@@ -9,3 +15,4 @@
 			<button class="btn btn-primary" type='submit'>Add Organization</button>
 			{{#link-to "dashboard.organizations" class="btn btn-link"}}Cancel{{/link-to}}
 </form>
+
