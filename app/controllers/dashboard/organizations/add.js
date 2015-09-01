@@ -5,6 +5,7 @@ import EmberValidations from 'ember-validations';
 export default Ember.Controller.extend(EmberValidations, {
 validationModel: Ember.computed.alias('model'),
 hasValidationErrors: false,
+addSuccess:false,
 validations: {
     'validationModel.name': {
       presence: {message: " Name is required"},
@@ -21,12 +22,13 @@ actions:{
 			var self = this;
 			self.validate().then(function(){
 				model.save().then(function(){
-						self.notifications.addNotification({
-			      message: 'Saved successfully!',
-			      type: 'success',
-			      autoClear: true,
-    });
-						//self.transitionToRoute('dashboard.organizations.index');
+						self.set('addSuccess', true);
+							self.notifications.addNotification({
+				      message: 'Organization successfully added!',
+				      type: 'success',
+				      autoClear: true,
+			    	});
+						self.transitionToRoute('dashboard.organizations.index');
 				}).catch(function(err){
 					console.log("errors:"+err);
 				});

@@ -22,4 +22,8 @@
 <section class="main-content ">       
     {{outlet}} 
 </section>
-
+<div class="c-notification__container">
+  {{#each notifications as |notification|}}
+    {{notification-message notification=notification}}
+  {{/each}}
+</div>

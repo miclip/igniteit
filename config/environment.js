@@ -11,7 +11,7 @@ module.exports = function(environment) {
       sessionServiceName: 'session'
     },
     contentSecurityPolicy: {
-      'style-src': '\'self\' fonts.googleapis.com',
+      'style-src': '\'self\' \'unsafe-inline\' fonts.googleapis.com',
       'font-src': '\'self\' fonts.gstatic.com',
       'img-src': '\'self\' *.gravatar.com data:image',
       'connect-src': '\'self\' wss://*.firebaseio.com https://auth.firebase.com'

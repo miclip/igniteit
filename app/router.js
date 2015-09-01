@@ -12,7 +12,6 @@ Router.map(function() {
   this.route('dashboard', { resetNamespace: true }, function () {
     this.route('organizations', function() {
       this.route('edit',{path: 'edit/:id'});
-      this.route('delete',{path: 'delete/:id'});
       this.route('add');
       this.route('details');
     });

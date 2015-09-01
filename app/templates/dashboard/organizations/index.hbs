@@ -1,22 +1,21 @@
 {{outlet}}	
 <div class="row">
 {{#each model as |org|}}
-<div class="col-md-3">
-	<div class="card card-inverse card-organization">
-    <div class="card-block">
-    	 <div class="card-edits	card-organization">
-    			{{#link-to 'dashboard.organizations.edit' org  }}<i class="fa fa-edit" tooltip="Edit Organization"></i>{{/link-to}}
-    			{{#link-to 'dashboard.organizations.delete' org  }}<i class="fa fa-trash" tooltip="Delete Organization"></i>{{/link-to}}    		
-  		 </div>
-      <h3 class="card-title">{{org.name}}</h3>
-      <p class="card-text">Some more stuff about the org.</p>
-      {{#if org.website}}
-      	<a href="{{org.website}}" target="new" class="btn btn-primary"><i class="fa fa-external-link"></i> Visit Website</a>
-      {{/if}}
+  <div class="col-md-3">
+  	<div class="card card-inverse card-organization">
+  <div class="card-block">
+    <div class="card-edits  card-organization">
+      {{#link-to 'dashboard.organizations.edit' org}}<i class="fa fa-edit" tooltip="Edit Organization"></i>{{/link-to}}
+      <a {{action 'showModal' 'confirm-delete' org}}><i class="fa fa-trash" tooltip="Delete Organization"></i></a>
     </div>
-   </div>
+    <h3 class="card-title">{{org.name}}</h3>
+    <p class="card-text">Some more stuff about the org.</p>
+    {{#if org.website}}
+      <a href="{{org.website}}" target="new" class="btn btn-primary"><i class="fa fa-external-link"></i> Visit Website</a>
+    {{/if}}
+  </div>
+</div>
   </div>
 {{/each}}
 </div>
-
 
