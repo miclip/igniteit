@@ -8,6 +8,8 @@
 			{{validated-input-group type="text" placeholder="Enter name" required="true" name="name" hasValidationErrors=hasValidationErrors labelText="Name:" value=model.name errors=errors.validationModel.name}}
 			{{validated-input-group type="url" placeholder="Website" name="website" hasValidationErrors=hasValidationErrors labelText="Website:" value=model.website errors=errors.validationModel.website}}
 			
+			{{image-drop image=model.logo placeholder="Organization Logo" helpText="Drop your image here, or click to select"}}
+
 			<button class="btn btn-primary" type='submit'>Add Organization</button>
 			{{#link-to "dashboard.organizations" class="btn btn-link"}}Cancel{{/link-to}}
 </form>
