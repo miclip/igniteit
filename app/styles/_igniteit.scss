@@ -20,7 +20,7 @@ header {
   padding-top: 0.1em;
   padding-right: 0.1em;
   padding-bottom: 0.1em;
-  padding-left: 1em;
+  padding-left: 1.5em;
   border-bottom: 1px dotted $black;
   h1 {
     margin: 0;
@@ -185,7 +185,9 @@ $color_boston_blue_approx: #428bca;
 .card-edits{
   position:relative;
   top:-20px;
-  @include pull-right;
   right:-15px;
   color: $white;
+  @include pull-right;
+  text-align: center;
+  
 }

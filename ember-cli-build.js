@@ -10,6 +10,7 @@ module.exports = function(defaults) {
 
   app.import(app.bowerDirectory + '/bootstrap/dist/js/bootstrap.js');
   app.import(app.bowerDirectory + '/JavaScript-MD5/js/md5.js');
+  app.import(app.bowerDirectory + '/imgLiquid/js/imgLiquid.js');
   var fontawesome = new funnel(app.bowerDirectory + '/font-awesome/fonts', {
     srcDir: '/',
     destDir: 'fonts'
