@@ -1,6 +1,10 @@
 <div class="container-fluid">
   <div class="row">
-   <div class="col-sm-3 col-md-2 sidebar">
+	<div class="col-sm-3 col-md-2 ">
+	   <button class="navbar-toggler hidden-sm-up" type="button" data-toggle="collapse" data-target="#collapseSidebar" >
+		&#9776;
+	   </button>
+	<div class="collapse sidebar" id="collapseSidebar">
       <ul class="nav nav-sidebar">
         <li class="nav-item">{{#link-to "dashboard.today" class="nav-link" }}<i class="fa fa-home"></i>Home{{/link-to}}</li>
         <li class="nav-item">{{#link-to "dashboard.organizations" class="nav-link" }}<i class="fa fa-institution"></i>Organizations{{/link-to}}</li>
@@ -11,7 +15,8 @@
         <li class="nav-item">{{#link-to "dashboard.packages" class="nav-link" }}<i class="fa fa-gift"></i> Packages{{/link-to}}</li>
         <li class="nav-item">{{#link-to "dashboard.sessions" class="nav-link" }}<i class="fa fa-heartbeat"></i> Sessions{{/link-to}}</li>
        </ul>
-     </div>
+	</div>
+  </div>
   <div class="col-sm-9 col-sm-offset-3 col-md-10 col-md-offset-2 main">
    {{outlet}}
   </div>

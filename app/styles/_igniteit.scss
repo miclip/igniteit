@@ -15,7 +15,9 @@ a {
   text-decoration: none;
 }
 header {
+  position: fixed;
   display: flex;
+  width:100%;
   align-items: center;
   padding-top: 0.1em;
   padding-right: 0.1em;
@@ -144,7 +146,8 @@ $color_boston_blue_approx: #428bca;
 
 
 .main {
-  padding: 20px;
+   padding: 20px;
+   padding-top: 60px;
   .page-header {
      display: -webkit-box;
       display: -webkit-flex;
