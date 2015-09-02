@@ -3,7 +3,7 @@ import Ember from 'ember';
 export default Ember.Component.extend({
 	// called with element created
   _init: function() {
-    var self = this;
+    //var self = this;
     var options = {
 
     	fill: this.get('fill'),
