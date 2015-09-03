@@ -1,27 +1,23 @@
-<div class="container-fluid">
+<div class="container">
   <div class="row">
-	<div class="col-sm-3 col-md-2 ">
-	   <button class="navbar-toggler hidden-sm-up" type="button" data-toggle="collapse" data-target="#collapseSidebar" >
-		&#9776;
-	   </button>
-	<div class="collapse sidebar" id="collapseSidebar">
-      <ul class="nav nav-sidebar">
-        <li class="nav-item">{{#link-to "dashboard.today" class="nav-link" }}<i class="fa fa-home"></i>Home{{/link-to}}</li>
-        <li class="nav-item">{{#link-to "dashboard.organizations" class="nav-link" }}<i class="fa fa-institution"></i>Organizations{{/link-to}}</li>
-        <li class="nav-item">{{#link-to "dashboard.clients" class="nav-link" }}<i class="fa fa-users"></i> Clients{{/link-to}}</li>
-        <li class="nav-item">{{#link-to "dashboard.facilities" class="nav-link" }}<i class="fa fa-building"></i> Facilities{{/link-to}}</li>
-        <li class="nav-item">{{#link-to "dashboard.trainers" class="nav-link" }}<i class="fa fa-black-tie"></i> Trainers{{/link-to}}</li>
-        <li class="nav-item">{{#link-to "dashboard.rates" class="nav-link" }}<i class="fa fa-usd"></i> Rates{{/link-to}}</li>
-        <li class="nav-item">{{#link-to "dashboard.packages" class="nav-link" }}<i class="fa fa-gift"></i> Packages{{/link-to}}</li>
-        <li class="nav-item">{{#link-to "dashboard.sessions" class="nav-link" }}<i class="fa fa-heartbeat"></i> Sessions{{/link-to}}</li>
-       </ul>
-	</div>
+  	<div class="col-sm-3 col-md-2 col-lg-2 ">
+    	<div class="col-xs-1 col-sm-1 col-md-2 col-lg-2 sidebar" id="collapseSidebar">
+          <ul class="nav nav-sidebar">
+            <li class="nav-item">{{#link-to "dashboard.today" class="nav-link hidden-text-sm" }}<i class="fa fa-home"></i>Home{{/link-to}}</li>
+            <li class="nav-item">{{#link-to "dashboard.organizations" class="nav-link hidden-text-sm" }}<i class="fa fa-institution"></i>Organizations{{/link-to}}</li>
+            <li class="nav-item">{{#link-to "dashboard.clients" class="nav-link hidden-text-sm" }}<i class="fa fa-users"></i> Clients{{/link-to}}</li>
+            <li class="nav-item">{{#link-to "dashboard.facilities" class="nav-link hidden-text-sm" }}<i class="fa fa-building"></i> Facilities{{/link-to}}</li>
+            <li class="nav-item">{{#link-to "dashboard.trainers" class="nav-link hidden-text-sm" }}<i class="fa fa-black-tie"></i> Trainers{{/link-to}}</li>
+            <li class="nav-item">{{#link-to "dashboard.rates" class="nav-link hidden-text-sm" }}<i class="fa fa-usd"></i> Rates{{/link-to}}</li>
+            <li class="nav-item">{{#link-to "dashboard.packages" class="nav-link hidden-text-sm" }}<i class="fa fa-gift"></i> Packages{{/link-to}}</li>
+            <li class="nav-item">{{#link-to "dashboard.sessions" class="nav-link hidden-text-sm" }}<i class="fa fa-heartbeat"></i> Sessions{{/link-to}}</li>
+           </ul>
+    	</div>
+    </div>
+    <div class="col-xs-9 col-xs-offset-1 col-sm-9 col-sm-offset-1 col-md-10 col-md-offset-2 col-lg-10 col-lg-offset-2 main">
+     {{outlet}}
+    </div>
   </div>
-  <div class="col-sm-9 col-sm-offset-3 col-md-10 col-md-offset-2 main">
-   {{outlet}}
-  </div>
-</div>
-
 </div>
 
 

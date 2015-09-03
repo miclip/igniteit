@@ -1,21 +1,22 @@
 <header>
-   <h1>
+   <h1 class="hidden-sm-down">
     {{#link-to "index"}}<strong>ignite</strong>it·io{{/link-to}}
   </h1>
+   
   <nav class="navbar-fixed">
   	{{#unless session.currentUser}}
-      {{#link-to "register"}}Register{{/link-to}}     
+      {{#link-to "register" class="hidden-text-sm"}}<i class="fa  fa-user-plus hidden-md-up"></i>Register{{/link-to}}     
     {{/unless}}
     {{#if session.currentUser}}
-       {{#link-to "dashboard"}}Dashboard{{/link-to}}
-       {{#link-to "account.manage"}}Account{{/link-to}}
-       <a class="ember-view" href="" {{action 'signOut'}}>Logout</a>
+       {{#link-to "dashboard" class="hidden-text-sm"}}<i class="fa fa-dashboard hidden-md-up"></i> Dashboard{{/link-to}}
+       {{#link-to "account.manage" class="hidden-text-sm"}}<i class="fa fa-user hidden-md-up"></i> Account{{/link-to}}
+       <a class="ember-view hidden-text-sm" href="" {{action 'signOut'}}><i class="fa fa-sign-out hidden-md-up"></i> Logout</a>
         {{gravatar-image email=session.currentUser.email 
           defaultImage='identicon'
           class='img-circle img-responsive'
           size=60}}
     {{else}}
-      {{#link-to "login"}}Login{{/link-to}}
+      {{#link-to "login" class="hidden-text-sm"}}<i class="fa fa-sign-in hidden-md-up"></i>Login{{/link-to}}
     {{/if}}
   </nav>
 </header>
