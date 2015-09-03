@@ -269,7 +269,7 @@ nav {
   color: $white;
   @include pull-right;
   text-align: center;
-  
+  .btn {padding:0px;}
 }
 
 .page-content{

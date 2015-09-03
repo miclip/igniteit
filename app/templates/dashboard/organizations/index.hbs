@@ -5,8 +5,8 @@
     	<div class="card card-inverse card-organization">
         <div class="card-block">
           <div class="card-edits  card-organization">
-            {{#link-to 'dashboard.organizations.edit' org}}<i class="fa fa-edit" tooltip="Edit Organization"></i>{{/link-to}}
-            <a {{action 'showModal' 'confirm-delete' org}}><i class="fa fa-trash" tooltip="Delete Organization"></i></a>
+            {{#link-to 'dashboard.organizations.edit' org class="btn"}}<i class="fa fa-edit" tooltip="Edit Organization"></i>{{/link-to}}
+            <a class="btn" {{action 'showModal' 'confirm-delete' org}}><i class="fa fa-trash" tooltip="Delete Organization"></i></a>
           </div>
           <h3 class="card-title">{{org.name}}</h3>
         </div>
