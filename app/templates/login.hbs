@@ -1,4 +1,7 @@
-<div class="container">
+
+<div class="container ">
+ <div class="row">
+   <div class="col-md-12 main">
 	{{#unless session.currentUser}}
 		<form {{action 'signIn' model on="submit"}}> 
 			 <h2>Login</h2>
@@ -14,6 +17,8 @@
 			{{#link-to "reset" class=' btn btn-link'}}Forgot password?{{/link-to}}
 		</form>  
 	{{/unless}}
+	</div>
+   </div>
 </div>
 
  

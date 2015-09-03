@@ -24,22 +24,19 @@ actions:{
 	 	var email = model.get('email');	  
 	  var password = model.get('password');
 	  self.validate().then(function(){
-
 	  	self.get("session").open("firebase", { 
-
 		  	provider: "password", 
 		  	email:email, 
 		  	password:password, 
-		  	session: "sessionOnly"}).then(function() {
-
-		  		var previousTransition = self.get('previousTransition');
-
-		  		if (previousTransition) {
+		  	session: "sessionOnly"}).then(() => {
+				 
+					var previousTransition = self.get('previousTransition');
+					
+		  		if ( previousTransition && previousTransition.targetName !== "index") {
 		        previousTransition.retry();
 		        return;
           }
-
-		  		self.transitionToRoute("dashboard");
+		  		self.transitionToRoute("dashboard.today");
 
     }).catch(function(err){
 
