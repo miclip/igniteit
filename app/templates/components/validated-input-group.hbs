@@ -1,6 +1,8 @@
 
 <div class="form-group {{if showError 'has-error '}} {{if showSuccess 'has-success'}}">
-		{{label labelText for=name class="control-label"}} {{#if required}}<span class="required-asterisk red">*</span>{{/if}}
+	<div class="control-label">
+		{{label labelText for=name }} {{#if required}}<span class="required-asterisk red">*</span>{{/if}}
+	</div>		
 		{{#if showError}}
 			{{input value=value name=name class="form-control form-control-error"  focus-out="showErrors" type=type placeholder=placeholder}}
 		{{else if showSuccess}}

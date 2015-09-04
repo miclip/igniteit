@@ -1,13 +1,32 @@
-{{validated-input-group type="text" placeholder="Enter name" required="true" name="name" hasValidationErrors=hasValidationErrors labelText="Name:" value=model.name errors=errors.validationModel.name}}
 
-{{validated-input-group type="text" placeholder="Enter Line 1" required="true" name="line1" hasValidationErrors=hasValidationErrors labelText="Line 1:" value=model.line1 errors=errors.validationModel.line1}}
+<div class="card card-block">
+  <h4 class="card-title">{{addressName}} Address</h4>
 
-{{validated-input-group type="text" placeholder="Enter Line 2" required="true" name="line2" hasValidationErrors=hasValidationErrors labelText="Line 2:" value=model.line2 errors=errors.validationModel.line2}}
 
-{{validated-input-group type="text" placeholder="Enter Line 3" required="true" name="line3" hasValidationErrors=hasValidationErrors labelText="Line 3:" value=model.line3 errors=errors.validationModel.line3}}
+	<div class="row">
+		<div class="col-md-12">
+				{{validated-input-group type="text" placeholder="Enter name" required="true" name="name" hasValidationErrors=hasValidationErrors labelText="Name:" value=model.name errors=errors.validationModel.name}}
+		</div>
+	</div>
 
-{{validated-input-group type="text" placeholder="City" required="true" name="city" hasValidationErrors=hasValidationErrors labelText="City:" value=model.city errors=errors.validationModel.city}}
+	<div class="row">
+		<div class="col-md-6">
+			{{validated-input-group type="text" placeholder="Enter Line 1" required="true" name="line1" hasValidationErrors=hasValidationErrors labelText="Line 1:" value=model.line1 errors=errors.validationModel.line1}}
 
-{{validated-input-group type="text" placeholder="State" required="true" name="state" hasValidationErrors=hasValidationErrors labelText="State:" value=model.state errors=errors.validationModel.state}}
+			{{validated-input-group type="text" placeholder="Enter Line 2" name="line2" hasValidationErrors=hasValidationErrors labelText="Line 2:" value=model.line2 errors=errors.validationModel.line2}}
 
-{{validated-input-group type="text" placeholder="Enter Zip" required="true" name="postCode" hasValidationErrors=hasValidationErrors labelText="Zip:" value=model.postCode errors=errors.validationModel.postCode}}
+			{{validated-input-group type="text" placeholder="Enter Line 3" name="line3" hasValidationErrors=hasValidationErrors labelText="Line 3:" value=model.line3 errors=errors.validationModel.line3}}
+		</div>
+		<div class="col-md-6">
+			{{validated-input-group type="text" placeholder="City" required="true" name="city" hasValidationErrors=hasValidationErrors labelText="City:" value=model.city errors=errors.validationModel.city}}
+
+			{{validated-input-group type="text" placeholder="State" required="true" name="state" hasValidationErrors=hasValidationErrors labelText="State:" value=model.state errors=errors.validationModel.state}}
+
+			{{validated-input-group type="text" placeholder="Enter Zip" required="true" name="postCode" hasValidationErrors=hasValidationErrors labelText="Zip:" value=model.postCode errors=errors.validationModel.postCode}}
+		</div>
+	</div>
+
+	
+
+
+</div>

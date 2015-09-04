@@ -2,7 +2,9 @@
 	"folders":
 	[
 		{
-			"path": "/C/Projects/Ember/igniteit"
+			"path": "/C/Projects/Ember/igniteit",
+			"folder_exclude_patterns": ["tmp"]
+
 		}
 	]
 }

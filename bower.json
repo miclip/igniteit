@@ -16,7 +16,8 @@
     "JavaScript-MD5": "~1.1.1",
     "jquery": "^1.11.3",
     "loader.js": "ember-cli/loader.js#3.2.1",
-    "qunit": "~1.18.0"
+    "qunit": "~1.18.0",
+    "select2": "3.5.2"
   },
   "resolutions": {
     "ember": "^2.0.0"
