@@ -2,7 +2,14 @@ import AuthBase from '../../authenticated-base';
 
 export default AuthBase.extend({
 	model: function(){
-		 var uid = this.get('session').get('currentUser').get('id');
-     return this.store.query('organization',{ owner: uid });
+		var self = this;
+		return new Ember.RSVP.Promise(function(resolve) {
+			var uid = self.get('session').get('currentUser').get('id');
+			self.store.findRecord('user',uid).then((user)=>{
+		   	 user.get('organizations').then((organizations)=>{
+		   	   resolve(organizations);
+		   	 });
+	    });
+    });  
 	}
 });

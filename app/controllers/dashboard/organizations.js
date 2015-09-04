@@ -6,6 +6,12 @@ actions:{
 				var self = this;		
 				model.destroyRecord().then(function(){	
 
+						var uid = self.get('session').get('currentUser').get('id');
+	    			self.store.findRecord('user',uid).then((user)=>{
+	    				user.get('organizations').removeObject(model);
+	    				user.save();
+	    			});
+
  						self.notifications.addNotification({
 						  message: 'Organization successfully deleted!',
 						  type: 'warning',

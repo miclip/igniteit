@@ -1,18 +1,1 @@
-	<form {{action 'save' model on="submit" }}>
-			<h2>Edit</h2>
-			{{#if model.errors}}
-				{{display-errors errors=model.errors}}
-			{{/if}}
-			{{validated-input-group type="text" placeholder="Enter name" required="true" name="name" hasValidationErrors=hasValidationErrors labelText="Name:" value=model.name errors=errors.validationModel.name}}
-			{{validated-input-group type="url" placeholder="Website" name="website" hasValidationErrors=hasValidationErrors labelText="Website:" value=model.website errors=errors.validationModel.website}}
-			<div class="form-group">
-				{{image-drop image=model.logo placeholder="Organization Logo" helpText="Drop your image here, or click to select"}}
-			</div>
-			<p>
-				<button class="btn btn-primary" type='submit'>Save Organization</button>
-			{{#link-to "dashboard.organizations" class="btn btn-link"}}Cancel{{/link-to}}
-			</p>
-			
-</form>
-
-
+{{organization-edit model=model}}
