@@ -1,5 +1,5 @@
 	<form {{action 'save' model on="submit" }}>
-			<h2>Edit</h2>
+			<h2>{{actionName}}</h2>
 			{{#if model.errors}}
 				{{display-errors errors=model.errors}}
 			{{/if}}

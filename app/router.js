@@ -15,7 +15,9 @@ Router.map(function() {
       this.route('add');
       this.route('details');
     });
-    this.route('facilities');
+    this.route('facilities', function() {
+      this.route('add');
+    });
     this.route('trainers');
     this.route('clients');
     this.route('rates');
@@ -28,7 +30,8 @@ Router.map(function() {
     this.route('manage');
     this.route('delete');
   });
-  
+
+ 
 });
 export default Router;
 
