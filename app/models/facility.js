@@ -6,6 +6,7 @@ export default DS.Model.extend({
   image: DS.attr('string'),
   owner: DS.attr('string'),
   organizationId: DS.attr('string'),
+  owner: DS.attr('string'),
   createdDate: DS.attr('date', {
     defaultValue() { return new Date(); }
   }),

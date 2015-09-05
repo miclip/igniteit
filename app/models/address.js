@@ -12,4 +12,7 @@ export default DS.Model.extend({
   createdDate: DS.attr('date', {
     defaultValue() { return new Date(); }
   }),
+  owner: DS.attr('string'),
+  addressType: DS.attr('string'),
+  parentId: DS.attr('string'),
 });

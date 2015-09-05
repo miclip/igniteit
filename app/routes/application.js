@@ -13,7 +13,7 @@ export default Ember.Route.extend({
   actions: {
 	// global signout action  
     signOut: function() {
-    	this.get('store').unloadAll('user');
+    	this.get('store').unloadAll();
       this.get("session").close();
       this.transitionTo('index');
     },

@@ -3,11 +3,11 @@
 		{{label labelText for=name }} {{#if required}}<span class="required-asterisk red">*</span>{{/if}}
 	</div>		
 		{{#if showError}}
-			{{select-2 content=content query=query name=name typeaheadSearchingText=typeaheadSearchingText typeaheadNoMatchesText=typeaheadNoMatchesText typeaheadErrorText=typeaheadErrorText minimumInputLength=minimumInputLength maximumInputLength=maximumInputLength value=value placeholder=placeholder focus-out="showErrors" allowClear=allowClear class="form-control-error"  }}
+			{{select-2 content=content query=query name=name typeaheadSearchingText=typeaheadSearchingText typeaheadNoMatchesText=typeaheadNoMatchesText typeaheadErrorText=typeaheadErrorText optionValuePath=optionValuePath optionLabelPath=optionLabelPath minimumInputLength=minimumInputLength maximumInputLength=maximumInputLength value=value placeholder=placeholder focus-out="showErrors" allowClear=allowClear class="form-control-error"  }}
 		{{else if showSuccess}}		
-			{{select-2 content=content query=query name=name typeaheadSearchingText=typeaheadSearchingText typeaheadNoMatchesText=typeaheadNoMatchesText typeaheadErrorText=typeaheadErrorText minimumInputLength=minimumInputLength maximumInputLength=maximumInputLength value=value placeholder=placeholder focus-out="showErrors" allowClear=allowClear class="form-control-success"  }}
+			{{select-2 content=content query=query name=name typeaheadSearchingText=typeaheadSearchingText typeaheadNoMatchesText=typeaheadNoMatchesText typeaheadErrorText=typeaheadErrorText optionValuePath=optionValuePath optionLabelPath=optionLabelPath minimumInputLength=minimumInputLength maximumInputLength=maximumInputLength value=value placeholder=placeholder focus-out="showErrors" allowClear=allowClear class="form-control-success"  }}
 		{{else}}
-			{{select-2 content=content query=query name=name typeaheadSearchingText=typeaheadSearchingText typeaheadNoMatchesText=typeaheadNoMatchesText typeaheadErrorText=typeaheadErrorText minimumInputLength=minimumInputLength maximumInputLength=maximumInputLength value=value placeholder=placeholder focus-out="showErrors" allowClear=allowClear   }}
+			{{select-2 content=content query=query name=name typeaheadSearchingText=typeaheadSearchingText typeaheadNoMatchesText=typeaheadNoMatchesText typeaheadErrorText=typeaheadErrorText optionValuePath=optionValuePath optionLabelPath=optionLabelPath minimumInputLength=minimumInputLength maximumInputLength=maximumInputLength value=value placeholder=placeholder focus-out="showErrors" allowClear=allowClear   }}
 		{{/if}}		
 		{{#if showError}}
 	  	<p class="error-message">{{errors}}</p>

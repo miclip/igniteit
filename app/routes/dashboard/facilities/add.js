@@ -5,7 +5,8 @@ export default AuthBase.extend({
 		
 	 var uid = this.get('session').get('currentUser').get('id');
    return this.store.createRecord('facility',{
-   		owner: uid
+   		owner: uid,
+   		address: this.store.createRecord('address',{owner:uid, addressType:'facility'}),
    });
  },
 

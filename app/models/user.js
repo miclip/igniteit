@@ -17,4 +17,5 @@ export default DS.Model.extend({
   }),
   organizations: DS.hasMany('organization', {async : true}),
   facilities: DS.hasMany('facility', {async : true}),
+  addresses: DS.hasMany('address', {async : true}),
 });

@@ -1,28 +1,28 @@
 
 <div class="card card-block">
-  <h4 class="card-title">{{addressName}} Address</h4>
+  <h4 class="card-title">{{addressTitle}} Address</h4>
 
 
 	<div class="row">
 		<div class="col-md-12">
-				{{validated-input-group type="text" placeholder="Enter name" required="true" name="name" hasValidationErrors=hasValidationErrors labelText="Name:" value=model.name errors=errors.validationModel.address.name}}
+				{{validated-input-group type="text" placeholder="Enter address name" required="true" name="name" hasValidationErrors=hasValidationErrors labelText="Address Name:" value=model.address.name errors=errors.validationModelAddress.name}}
 		</div>
 	</div>
 
 	<div class="row">
 		<div class="col-md-6">
-			{{validated-input-group type="text" placeholder="Enter Line 1" required="true" name="line1" hasValidationErrors=hasValidationErrors labelText="Line 1:" value=model.line1 errors=errors.validationModel.address.line1}}
+			{{validated-input-group type="text" placeholder="Enter Line 1" required="true" name="line1" hasValidationErrors=hasValidationErrors labelText="Line 1:" value=model.address.line1 errors=errors.validationModelAddress.line1}}
 
-			{{validated-input-group type="text" placeholder="Enter Line 2" name="line2" hasValidationErrors=hasValidationErrors labelText="Line 2:" value=model.line2 errors=errors.validationModel.line2}}
+			{{validated-input-group type="text" placeholder="Enter Line 2" name="line2" hasValidationErrors=hasValidationErrors labelText="Line 2:" value=model.address.line2 errors=errors.validationModelAddress.line2}}
 
-			{{validated-input-group type="text" placeholder="Enter Line 3" name="line3" hasValidationErrors=hasValidationErrors labelText="Line 3:" value=model.line3 errors=errors.validationModel.address.line3}}
+			{{validated-input-group type="text" placeholder="Enter Line 3" name="line3" hasValidationErrors=hasValidationErrors labelText="Line 3:" value=model.address.line3 errors=errors.validationModelAddress.line3}}
 		</div>
 		<div class="col-md-6">
-			{{validated-input-group type="text" placeholder="City" required="true" name="city" hasValidationErrors=hasValidationErrors labelText="City:" value=model.city errors=errors.validationModel.address.city}}
+			{{validated-input-group type="text" placeholder="City" required="true" name="city" hasValidationErrors=hasValidationErrors labelText="City:" value=model.address.city errors=errors.validationModelAddress.city}}
 
-			{{validated-input-group type="text" placeholder="State" required="true" name="state" hasValidationErrors=hasValidationErrors labelText="State:" value=model.state errors=errors.validationModel.address.state}}
+			{{validated-input-group type="text" placeholder="State" required="true" name="state" hasValidationErrors=hasValidationErrors labelText="State:" value=model.address.state errors=errors.validationModelAddress.state}}
 
-			{{validated-input-group type="text" placeholder="Enter Zip" required="true" name="postCode" hasValidationErrors=hasValidationErrors labelText="Zip:" value=model.postCode errors=errors.validationModel.address.postCode}}
+			{{validated-input-group type="text" placeholder="Enter Zip" required="true" name="postCode" hasValidationErrors=hasValidationErrors labelText="Zip:" value=model.address.postCode errors=errors.validationModelAddress.postCode}}
 		</div>
 	</div>
 
