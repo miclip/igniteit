@@ -1,16 +1,21 @@
-	<form {{action 'save' model on="submit" }}>
-			<h2>{{actionName}}</h2>
-			{{#if model.errors}}
-				{{display-errors errors=model.errors}}
-			{{/if}}
-			{{validated-input-group type="text" placeholder="Enter name" required="true" name="name" hasValidationErrors=hasValidationErrors labelText="Name:" value=model.name errors=errors.validationModel.name}}
-			{{address-edit model=model.address}}
-			<div class="form-group">
-				{{image-drop image=model.image placeholder="Facility Picture" helpText="Drop your image here, or click to select"}}
-			</div>
-			<p>
-				<button class="btn btn-primary" type='submit'>Save Facility</button>
-			{{#link-to "dashboard.facilities" class="btn btn-link"}}Cancel{{/link-to}}
-			</p>			
-</form>
+<h2>{{actionName}}</h2>
+{{#if model.errors}}
+	{{display-errors errors=model.errors}}
+{{/if}}
+
+{{validated-select2-group content=content
+    optionValuePath="id" optionLabelPath="text"
+    placeholder="Choose Organization" required="true" name="organizationId" hasValidationErrors=hasValidationErrors labelText="Select Organization:" value=model.organizationId errors=errors.validationModel.organizationId allowClear=true}}
+
+{{validated-input-group type="text" placeholder="Enter name" required="true" name="name" hasValidationErrors=hasValidationErrors labelText="Name:" value=model.name errors=errors.validationModel.name}}
+{{address-edit model=model.address addressName='Facility'  hasValidationErrors=hasValidationErrors errors=errors}}
+
+<div class="form-group">
+	{{image-drop image=model.image placeholder="Facility Picture" helpText="Drop your image here, or click to select"}}
+</div>
+<p>
+	<button class="btn btn-primary" type='submit'>Save Facility</button>
+{{#link-to "dashboard.facilities" class="btn btn-link"}}Cancel{{/link-to}}
+</p>			
+
 

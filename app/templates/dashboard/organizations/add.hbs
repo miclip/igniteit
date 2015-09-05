@@ -1,2 +1,3 @@
-
-{{organization-edit model=model actionName="Add"}}
+<form {{action 'save' model on="submit" }}>
+{{organization-edit action 'save' model=model actionName="Add" hasValidationErrors=hasValidationErrors errors=errors	}}
+</form>

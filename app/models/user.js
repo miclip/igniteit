@@ -15,6 +15,6 @@ export default DS.Model.extend({
   	var name = this.get('name');
     return (name != null) ? name : this.get('email');
   }),
-  organizations: DS.hasMany('organization', {async : true})
-  
+  organizations: DS.hasMany('organization', {async : true}),
+  facilities: DS.hasMany('facility', {async : true}),
 });

@@ -1,0 +1,86 @@
+//colors
+$white: #fff;
+$color_celeste_approx: #ccc;
+$alabaster: #fafafa;
+$color_polo_blue_approx: #91acce;
+
+//@extend-elements
+//original selectors
+//.select2-search input, .select2-search input:focus
+%extend_1 {
+  background-color: $white;
+  background-image: none;
+  background: $white;
+  //Instead of the line below you could use @include box-shadow($shadow-1, $shadow-2, $shadow-3, $shadow-4, $shadow-5, $shadow-6, $shadow-7, $shadow-8, $shadow-9, $shadow-10)
+  box-shadow: none;
+  border: none;
+}
+
+
+.select2-container {
+  .select2-choice {
+    height: 34px;
+    //Instead of the line below you could use @include box-shadow($shadow-1, $shadow-2, $shadow-3, $shadow-4, $shadow-5, $shadow-6, $shadow-7, $shadow-8, $shadow-9, $shadow-10)
+    box-shadow: none;
+    background-color: $white;
+    background-image: none;
+    background: $white;
+    //Instead of the line below you could use @include border-radius($radius, $vertical-radius)
+    border-radius: 0;
+    border-color: $color_celeste_approx;
+    .select2-chosen {
+      margin-top: 4px;
+    }
+    abbr {
+      top: 13px;
+    }
+    .select2-arrow {
+      //Instead of the line below you could use @include border-radius($radius, $vertical-radius)
+      border-radius: 0;
+      border-color: $color_celeste_approx;
+      background-color: $alabaster;
+      background-image: none;
+      background: $alabaster;
+      width: 22px;
+      b>span {
+        margin: 4px 0 0 6px;
+      }
+    }
+  }
+  &.form-control {
+    border: none;
+    //Instead of the line below you could use @include box-shadow($shadow-1, $shadow-2, $shadow-3, $shadow-4, $shadow-5, $shadow-6, $shadow-7, $shadow-8, $shadow-9, $shadow-10)
+    box-shadow: none;
+    padding: 0;
+  }
+  &.select2-container-active .select2-choice {
+    border-color: $color_polo_blue_approx;
+  }
+  &.select2-dropdown-open .select2-choice {
+    border-bottom-color: $color_celeste_approx;
+  }
+}
+.select2-drop {
+  //Instead of the line below you could use @include border-radius($radius, $vertical-radius)
+  border-radius: 0 !important;
+  .select2-results {
+    max-height: 300px;
+    li {
+      line-height: inherit;
+      margin: 0;
+      padding: 0;
+    }
+  }
+  &:not(.select2-drop-above) {
+    margin-top: -3px;
+  }
+}
+.select2-search {
+  margin: 4px 0;
+  input {
+    @extend %extend_1;
+    &:focus {
+      @extend %extend_1;
+    }
+  }
+}

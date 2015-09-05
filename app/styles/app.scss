@@ -1,5 +1,7 @@
-@import "_custom-variables.scss";
+@import "custom-variables.scss";
 @import "../../bower_components/bootstrap/scss/bootstrap.scss";
 @import "../../bower_components/font-awesome/scss/font-awesome.scss";
 @import "../../node_modules/ember-cli-notifications/addon/styles/addon.scss";
-@import "_igniteit.scss";
+//@import "../../bower_components/select2/src/scss/core.scss";
+@import "select2-flat.scss";
+@import "igniteit.scss";
