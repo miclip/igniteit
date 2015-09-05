@@ -1,4 +1,4 @@
-import AuthBase from '../authenticated-base';
+import AuthBase from './authenticated-base';
 
 export default AuthBase.extend({
 	model: function(){

@@ -1,5 +1,5 @@
-import AuthBase from './authenticated-base';
+import AuthUserBase from './authenticated-user';
 
-export default AuthBase.extend({
+export default AuthUserBase.extend({
 	
 });
