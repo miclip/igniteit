@@ -1,1 +1,21 @@
-{{outlet}}
+{{outlet}}	
+<div class="row">
+  {{#each model as |facility|}}
+    <div class="col-md-5 col-lg-4">
+    	<div class="card card-inverse card-facility">
+        <div class="card-block">
+          <div class="card-edits  card-facility">
+            {{#link-to 'dashboard.facilities.edit' facility class="btn"}}<i class="fa fa-edit" tooltip="Edit Facility"></i>{{/link-to}}
+            <a class="btn" {{action 'showModal' 'confirm-delete' facility}}><i class="fa fa-trash" tooltip="Delete Facility"></i></a>
+          </div>
+          <h3 class="card-title">{{facility.name}}</h3>
+        </div>
+        {{img-liquid image=facility.image fill=true horizontalAlign="center" verticalAlign="50%"}}
+        <div class="card-block">
+         
+        </div>
+      </div>
+    </div>
+  {{/each}}
+</div>
+

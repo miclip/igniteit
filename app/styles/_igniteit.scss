@@ -255,9 +255,16 @@ nav {
 .gray{
   color: $gray;
 }
-
+.card-entity{
+  background-color: #333; 
+  border-color: #333;
+}
 
 .card-organization{
+ background-color: #333; 
+ border-color: #333;
+}
+.card-facility{
  background-color: #333; 
  border-color: #333;
 }

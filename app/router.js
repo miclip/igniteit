@@ -17,6 +17,7 @@ Router.map(function() {
     });
     this.route('facilities', function() {
       this.route('add');
+      this.route('edit',{path: 'edit/:id'});
     });
     this.route('trainers');
     this.route('clients');

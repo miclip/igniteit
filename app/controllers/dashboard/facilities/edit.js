@@ -1,18 +1,26 @@
-import OrganizationBase from './base';
+import FacilityBase from './base';
 
-export default OrganizationBase.extend({
+export default FacilityBase.extend({
 actions:{
 	save:function(model){
 			var self = this;
+			model.set('countryCode','US');
 			self.validate().then(function(){
 				model.save().then(function(){
-						self.set('addSuccess', true);
+						// save the address
+						self.store.findRecord('address',model.get('address').get('id')).then((address)=>{
+	    				address.save();
+	    				// update user and save 
+							
+	    				
+	    			});
+
 							self.notifications.addNotification({
-				      message: 'Organization successfully updated!',
+				      message: 'Facility successfully saved!',
 				      type: 'success',
 				      autoClear: true,
 			    	});
-						self.transitionToRoute('dashboard.organizations.index');
+						self.transitionToRoute('dashboard.facilities.index');
 				}).catch(function(err){
 					console.log("errors:"+err);
 				});

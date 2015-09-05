@@ -9,9 +9,10 @@ export default AuthBase.extend({
 			var uid = self.get('session').get('currentUser').get('id');
 			self.store.findRecord('user',uid).then((user)=>{
 		   	 user.get('facilities').then((facilities)=>{
-		   	 		user.get('addresses').then((addresses)=>{
+		   	 		user.get('addresses').then(()=>{
+
 		   	 			resolve(facilities);
-		   	 		})
+		   	 		});
 		   	 });
 	    });
     });  
