@@ -1,14 +1,13 @@
-
 import DS from 'ember-data';
 
 export default DS.Model.extend({
   name: DS.attr('string'),
-  website: DS.attr('string'),
+  userId: DS.attr('string'),
+  address: DS.belongsTo('address',{async:true}),	
+  organizationId: DS.attr('string'),
+  image: DS.attr('string'),
   owner: DS.attr('string'),
-	logo: DS.attr('string'),
   createdDate: DS.attr('date', {
     defaultValue() { return new Date(); }
-  }),
-  facilities: DS.hasMany('facility', {async : true}),
-  trainers: DS.hasMany('trainer', {async : true}),
+  }),	
 });

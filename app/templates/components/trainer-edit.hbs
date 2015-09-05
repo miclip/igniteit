@@ -1,0 +1,20 @@
+<h2>{{actionName}}</h2>
+{{#if model.errors}}
+	{{display-errors errors=model.errors}}
+{{/if}}
+
+{{validated-select2-group content=content
+    optionValuePath="id" optionLabelPath="text"
+    placeholder="Choose Organization" required="true" name="organizationId" hasValidationErrors=hasValidationErrors labelText="Select Organization:" value=model.organizationId errors=errors.validationModel.organizationId allowClear=true}}
+
+{{validated-input-group type="text" placeholder="Enter name" required="true" name="name" hasValidationErrors=hasValidationErrors labelText="Name:" value=model.name errors=errors.validationModel.name}}
+
+{{address-edit model=model addressTitle='Home'  hasValidationErrors=hasValidationErrors errors=errors}}
+
+<div class="form-group">
+	{{image-drop image=model.image placeholder="Trainer Picture" helpText="Drop your image here, or click to select"}}
+</div>
+<p>
+	<button class="btn btn-primary" type='submit'>Save Trainer</button>
+{{#link-to "dashboard.trainers" class="btn btn-link"}}Cancel{{/link-to}}
+</p>			

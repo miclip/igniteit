@@ -19,7 +19,10 @@ Router.map(function() {
       this.route('add');
       this.route('edit',{path: 'edit/:id'});
     });
-    this.route('trainers');
+    this.route('trainers', function() {
+      this.route('add');
+      this.route('edit',{path: 'edit/:id'});
+    });
     this.route('clients');
     this.route('rates');
     this.route('packages');
