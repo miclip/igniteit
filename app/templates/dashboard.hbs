@@ -11,7 +11,9 @@
             <li class="nav-item">{{#link-to "dashboard.rates" class=(if model.organizations.content 'nav-link hidden-text-sm ' 'nav-link disabled hidden-text-sm') }}<i class="fa fa-usd"></i> Rates{{/link-to}}</li>
             <li class="nav-item">{{#link-to "dashboard.packages" class=(if model.organizations.content 'nav-link hidden-text-sm ' 'nav-link disabled hidden-text-sm') }}<i class="fa fa-gift"></i> Packages{{/link-to}}</li>
             <li class="nav-item">{{#link-to "dashboard.sessions" class=(if model.organizations.content 'nav-link hidden-text-sm ' 'nav-link disabled hidden-text-sm') }}<i class="fa fa-heartbeat"></i> Sessions{{/link-to}}</li>
-           </ul>
+       
+            <li class="nav-item">{{#link-to "dashboard.invites" class="nav-link hidden-text-sm" }}<i class="fa fa-envelope"></i> Invites{{/link-to}}</li>
+          </ul>
     	</div>
     </div>
     <div class="col-xs-9 col-xs-offset-1 col-sm-9 col-sm-offset-1 col-md-10 col-md-offset-2 col-lg-10 col-lg-offset-2 main">

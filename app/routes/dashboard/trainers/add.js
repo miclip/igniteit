@@ -2,14 +2,17 @@ import AuthBase from '../../authenticated-base';
 
 export default AuthBase.extend({
 	model: function(){
-		
-	 var uid = this.get('session').get('currentUser').get('id');
-   return this.store.createRecord('trainer',{
+	var self = this;
+	 var uid = self.get('session').get('currentUser').get('id');
+   return self.store.findRecord('user',uid).then((user)=>{
+
+   	self.store.createRecord('trainer',{
    		owner: uid,
    		address: this.store.createRecord('address',{owner:uid, addressType:'trainer'}),
+   		invite: this.store.createRecord('invite', {invitedBy: user,role:'trainer' })
+   		});
    });
  },
-
  deactivate: function(){
 			var model = this.get('controller.model');
 			if(model.get('isNew')){

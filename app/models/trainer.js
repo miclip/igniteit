@@ -7,6 +7,7 @@ export default DS.Model.extend({
   organizationId: DS.attr('string'),
   image: DS.attr('string'),
   owner: DS.attr('string'),
+  invite: DS.belongsTo('invite',{async:true}),
   createdDate: DS.attr('date', {
     defaultValue() { return new Date(); }
   }),	
