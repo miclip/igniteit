@@ -1,6 +1,8 @@
 import FacilityBase from './base';
 
 export default FacilityBase.extend({
+userIsTrainer: true,
+userIdTrainerSet: false,
 actions:{
 	save:function(model){
 			var self = this;
@@ -22,9 +24,36 @@ actions:{
 	    			});
 
 	    			// update organization and save 
+	    			var emailSent = false;
 	    			self.store.findRecord('organization',model.get('organizationId')).then((org)=>{
 	    				org.get('trainers').pushObject(model);
 	    				org.save();
+	    				
+	    				
+									model.get('invite').then((invite)=>{
+										console.log("inviteEmail:"+invite.get('email'));
+										if(invite.get('email')){
+										
+										invite.set('organization',org);
+										invite.set('name',model.get('name'));
+										invite.save();
+										
+										//TODO Send Invite Email
+			
+										self.notifications.addNotification({
+								      message: 'Invite Email Sent!',
+								      type: 'success',
+								      autoClear: true,
+							    	});
+
+										} else {
+											model.get('invite').then((invite)=>{
+												invite.destroyRecord();
+											});
+										}
+									});
+							
+							
 	    			});	    			
 
 						self.set('addSuccess', true);
@@ -33,6 +62,9 @@ actions:{
 				      type: 'success',
 				      autoClear: true,
 			    	});
+
+						
+
 						self.transitionToRoute('dashboard.trainers.index');
 				}).catch(function(err){
 					console.log("errors:"+err);

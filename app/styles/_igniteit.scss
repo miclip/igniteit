@@ -70,6 +70,9 @@ header {
 .red {
   color: $brand-danger;
 }
+.green {
+  color: $brand-success;
+}
 .required-asterisk {
   font-size: 1em;
 }
@@ -289,3 +292,10 @@ nav {
 
 
 
+.bs-switch{
+  border: none;
+}
+
+.display-none{
+  display: none;
+}

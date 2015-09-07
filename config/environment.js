@@ -16,6 +16,9 @@ module.exports = function(environment) {
       'img-src': '\'self\' *.gravatar.com data:',
       'connect-src': '\'self\' wss://*.firebaseio.com https://auth.firebase.com'
     },
+    moment: {
+      allowEmpty: true // default: false
+    },
     EmberENV: {
       FEATURES: {
         // Here you can enable experimental features on an ember canary build

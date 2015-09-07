@@ -1,6 +1,6 @@
 <div class="form-group {{if showError 'has-error '}} {{if showSuccess 'has-success'}}">
 	<div class="control-label">
-		{{label labelText for=name }} {{#if required}}<span class="required-asterisk red">*</span>{{/if}}
+		{{label labelText for=name class="form-control-label" }} {{#if required}}<span class="required-asterisk red">*</span>{{/if}}
 	</div>		
 		{{#if showError}}
 			{{select-2 content=content query=query name=name typeaheadSearchingText=typeaheadSearchingText typeaheadNoMatchesText=typeaheadNoMatchesText typeaheadErrorText=typeaheadErrorText optionValuePath=optionValuePath optionLabelPath=optionLabelPath minimumInputLength=minimumInputLength maximumInputLength=maximumInputLength value=value placeholder=placeholder focus-out="showErrors" allowClear=allowClear class="form-control-error"  }}

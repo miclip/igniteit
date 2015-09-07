@@ -1,1 +1,30 @@
 {{outlet}}
+<table class="table table-inverse table-responsive">
+	<thead>
+		<tr>
+			<td>#</td>
+			<td>Role</td>
+			<td>Name</td>
+			<td>Email</td>
+			<td>Organization</td>
+			<td>Emailed</td>
+			<td>Sent</td>
+			<td>Accepted</td>
+		</tr>
+	</thead>
+ <tbody>
+ 	{{#each model as |invite index|}}
+ 		<tr>
+ 			<td scope="row">{{index}}</td>
+ 			<td>{{invite.roleCapitalized}}</td>
+ 			<td>{{invite.name}}</td>
+ 			<td>{{invite.email}}</td>
+			<td>{{invite.organization.name}}</td>
+			<td><i class={{if invite.emailSent "fa fa-check green" "fa fa-times red"}}></i></td>
+			<td>{{moment-from-now invite.emailSentDate}}</td>
+			<td><i class={{if invite.accepted "fa fa-check green" "fa fa-times red"}}></i></td>
+ 		</tr>
+ 		{{/each}}
+ </tbody>
+
+</table>
