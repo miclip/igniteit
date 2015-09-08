@@ -1,5 +1,5 @@
 {{outlet}}
-<table class="table table-inverse table-responsive">
+<table class="table table-small table-inverse table-responsive">
 	<thead>
 		<tr>
 			<td>#</td>
@@ -8,21 +8,34 @@
 			<td>Email</td>
 			<td>Organization</td>
 			<td>Emailed</td>
-			<td>Sent</td>
-			<td>Accepted</td>
+			<td>Accept</td>
+			<td></td>
 		</tr>
 	</thead>
  <tbody>
  	{{#each model as |invite index|}}
  		<tr>
- 			<td scope="row">{{index}}</td>
+ 			<td scope="row">{{increment index}}</td>
  			<td>{{invite.roleCapitalized}}</td>
  			<td>{{invite.name}}</td>
  			<td>{{invite.email}}</td>
 			<td>{{invite.organization.name}}</td>
-			<td><i class={{if invite.emailSent "fa fa-check green" "fa fa-times red"}}></i></td>
-			<td>{{moment-from-now invite.emailSentDate}}</td>
+			<td><i class={{if invite.emailSent "fa fa-check green" "fa fa-times red"}}></i>
+				<p>
+						<small class="text-muted">
+							{{moment-from-now invite.emailSentDate}}
+						</small>
+				</p>
+		</td>
 			<td><i class={{if invite.accepted "fa fa-check green" "fa fa-times red"}}></i></td>
+			<td>
+				<div class="btn-group btn-group-sm" role="group">
+				  <a class="btn btn-secondary" href="#"><i class="fa fa-edit"></i></a>
+				  <a class="btn btn-secondary" href="#"><i class="fa fa-repeat"></i></a>
+				  <a class="btn btn-secondary" href="#"><i class="fa fa-trash red"></i></a>
+				</div>
+			</td>
+
  		</tr>
  		{{/each}}
  </tbody>
