@@ -28,7 +28,9 @@ Router.map(function() {
     this.route('packages');
     this.route('sessions');
     this.route('today');
-    this.route('invites', function() {});
+    this.route('invites', function() {
+      this.route('edit',{path: 'edit/:id'});
+    });
   });
   this.route('account', { resetNamespace: true }, function () {
     this.route('password');

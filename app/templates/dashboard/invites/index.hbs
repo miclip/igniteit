@@ -1,43 +1,20 @@
-{{outlet}}
-<table class="table table-small table-inverse table-responsive">
-	<thead>
-		<tr>
-			<td>#</td>
-			<td>Role</td>
-			<td>Name</td>
-			<td>Email</td>
-			<td>Organization</td>
-			<td>Emailed</td>
-			<td>Accept</td>
-			<td></td>
-		</tr>
-	</thead>
- <tbody>
- 	{{#each model as |invite index|}}
- 		<tr>
- 			<td scope="row">{{increment index}}</td>
- 			<td>{{invite.roleCapitalized}}</td>
- 			<td>{{invite.name}}</td>
- 			<td>{{invite.email}}</td>
-			<td>{{invite.organization.name}}</td>
-			<td><i class={{if invite.emailSent "fa fa-check green" "fa fa-times red"}}></i>
-				<p>
-						<small class="text-muted">
-							{{moment-from-now invite.emailSentDate}}
-						</small>
-				</p>
-		</td>
-			<td><i class={{if invite.accepted "fa fa-check green" "fa fa-times red"}}></i></td>
-			<td>
-				<div class="btn-group btn-group-sm" role="group">
-				  <a class="btn btn-secondary" href="#"><i class="fa fa-edit"></i></a>
-				  <a class="btn btn-secondary" href="#"><i class="fa fa-repeat"></i></a>
-				  <a class="btn btn-secondary" href="#"><i class="fa fa-trash red"></i></a>
-				</div>
-			</td>
-
- 		</tr>
- 		{{/each}}
- </tbody>
-
-</table>
+{{outlet}}	
+<div class="row">
+  {{#each model as |invite|}}
+    <div class="col-md-5 col-lg-4">
+    	<div class="card card-inverse card-invite">
+        <div class="card-block">
+          <div class="card-edits  card-invite">
+            {{#link-to 'dashboard.invites.edit' invite class="btn"}}<i class="fa fa-edit" tooltip="Edit Invite"></i>{{/link-to}}
+            <a class="btn" {{action 'showModal' 'confirm-resend' invite}}><i class="fa fa-repeat" tooltip="Resend Invite"></i></a>
+            <a class="btn" {{action 'showModal' 'confirm-delete' invite}}><i class="fa fa-trash red" tooltip="Delete Invite"></i></a>
+          </div>
+          <h3 class="card-title">{{invite.name}}</h3>
+        </div>        
+        <div class="card-block">
+         	
+        </div>
+      </div>
+    </div>
+  {{/each}}
+</div>
