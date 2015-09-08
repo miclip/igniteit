@@ -24,7 +24,6 @@ actions:{
 	    			});
 
 	    			// update organization and save 
-	    			var emailSent = false;
 	    			self.store.findRecord('organization',model.get('organizationId')).then((org)=>{
 	    				org.get('trainers').pushObject(model);
 	    				org.save();

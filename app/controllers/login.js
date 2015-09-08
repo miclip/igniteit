@@ -32,7 +32,7 @@ actions:{
 				 
 					var previousTransition = self.get('previousTransition');
 					
-		  		if ( previousTransition && previousTransition.targetName !== "index") {
+		  		if ( previousTransition && previousTransition.targetName !== "index" && previousTransition.targetName !== "register") {
 		        previousTransition.retry();
 		        return;
           }

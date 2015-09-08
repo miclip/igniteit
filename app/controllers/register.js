@@ -43,7 +43,7 @@ actions:{
 					model.deleteRecord();
 					self.get('store').find('user', userData.uid)
       				.catch(() => {
-        				let newUser = self.get('store').createRecord('user', {id:userData.uid});
+        				let newUser = self.get('store').createRecord('user', {id:userData.uid, email:userData.email});
         				newUser.save();
       		});
 				  self.set('registerSuccess', true);

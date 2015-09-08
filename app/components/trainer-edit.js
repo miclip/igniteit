@@ -2,7 +2,7 @@ import Ember from 'ember';
 
 export default Ember.Component.extend({
 	actions:{
-		userIsTrainerChanged:function(event, state) {
+		userIsTrainerChanged:function() {
 				var elem = this.$('.create-invite');
 				if(elem.hasClass('display-none') || !elem.hasClass('showing-invite')) {
 					elem.fadeIn(500, function(){
@@ -11,7 +11,7 @@ export default Ember.Component.extend({
 
 				} else {
 					elem.fadeOut(500,function(){
-						elem.removeClass('showing-invite')
+						elem.removeClass('showing-invite');
 					});
 
 				}
