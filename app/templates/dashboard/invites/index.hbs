@@ -7,12 +7,27 @@
           <div class="card-edits  card-invite">
             {{#link-to 'dashboard.invites.edit' invite class="btn"}}<i class="fa fa-edit" tooltip="Edit Invite"></i>{{/link-to}}
             <a class="btn" {{action 'showModal' 'confirm-resend' invite}}><i class="fa fa-repeat" tooltip="Resend Invite"></i></a>
-            <a class="btn" {{action 'showModal' 'confirm-delete' invite}}><i class="fa fa-trash red" tooltip="Delete Invite"></i></a>
+            <a class="btn" {{action 'showModal' 'confirm-delete' invite}}><i class="fa fa-trash" tooltip="Delete Invite"></i></a>
           </div>
+          <h4 class="card-title text-capitalize">{{invite.role}}</h4>
           <h3 class="card-title">{{invite.name}}</h3>
         </div>        
         <div class="card-block">
-         	
+        	<p class="card-text"><i class="fa fa-university"></i> : {{invite.organization.name}}</p>
+        	<p class="card-text"><i class="fa fa-envelope"></i> : {{invite.email}}</p>
+        	<p class="card-text"><i class="fa fa-paper-plane"></i> : 
+        			{{#if invite.emailSent}}
+        					Sent <i class="fa fa-check green"></i> 
+        			{{else}}
+									Not Sent <i class="fa fa-times red"></i> 
+        			{{/if}}{{moment-from-now invite.emailSentDate}}</p>
+        	<p class="card-text"><i class="fa fa-user-plus"></i> : 
+        			{{#if invite.accepted}}
+        					Accepted <i class="fa fa-check green"></i> 
+        			{{else}}
+									Not Accepted Yet <i class="fa fa-times red"></i> 
+        			{{/if}}{{moment-from-now invite.acceptedDate}}</p>
+        	
         </div>
       </div>
     </div>
