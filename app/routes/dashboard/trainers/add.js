@@ -37,14 +37,22 @@ export default AuthBase.extend({
 		   	    controller.set('userOrganizations', options);
 		   	});
 	 	});
-	 	self.store.query('trainer',{owner:uid, userId:uid}).then((trainers)=>{
-	 		if(trainers.get('length')!==0){
-	 			controller.set('userIsTrainerSet', true);
-	 			controller.set('userIsTrainer', false);
-	 		} else {
-	 			controller.set('userIsTrainerSet', false);
-	 			controller.set('userIsTrainer', true);
-	 		}
+	 	self.store.query('trainer',{orderBy:'owner',startAt:uid, endAt:uid}).then((trainers)=>{
+	 		trainers.forEach((trainer)=>{
+	 			if(trainer.get('userId')===uid){
+	 				if(trainers.get('length')!==0){
+			 			controller.set('userIsTrainerSet', true);
+			 			controller.set('userIsTrainer', false);
+			 		} else {
+			 			controller.set('userIsTrainerSet', false);
+			 			controller.set('userIsTrainer', true);
+			 		}
+			 		
+	 			}
+
+	 		});
+	 		
+
 	 	}).catch(()=>{
 	 		controller.set('userIsTrainerSet', false);
 	 		controller.set('userIsTrainer', true);

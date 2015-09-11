@@ -32,7 +32,7 @@ actions:{
 									model.get('invite').then((invite)=>{
 										console.log("inviteEmail:"+invite.get('email'));
 										if(invite.get('email')){
-										
+										invite.set('parentId',model.id);
 										invite.set('organization',org);
 										invite.set('name',model.get('name'));
 										invite.save();

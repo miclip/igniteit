@@ -10,6 +10,10 @@
             <a class="btn" {{action 'showModal' 'confirm-delete' invite}}><i class="fa fa-trash" tooltip="Delete Invite"></i></a>
           </div>
           <h4 class="card-title text-capitalize">{{invite.role}}</h4>
+          {{gravatar-image email=invite.email 
+				  defaultImage='identicon'
+				  class='img-responsive img-rounded'
+				  size=100}}
           <h3 class="card-title">{{invite.name}}</h3>
         </div>        
         <div class="card-block">
@@ -17,15 +21,15 @@
         	<p class="card-text"><i class="fa fa-envelope"></i> : {{invite.email}}</p>
         	<p class="card-text"><i class="fa fa-paper-plane"></i> : 
         			{{#if invite.emailSent}}
-        					Sent <i class="fa fa-check green"></i> 
+        					<i class="fa fa-check green"></i> Sent 
         			{{else}}
-									Not Sent <i class="fa fa-times red"></i> 
+									<i class="fa fa-times red"></i> Not sent 
         			{{/if}}{{moment-from-now invite.emailSentDate}}</p>
         	<p class="card-text"><i class="fa fa-user-plus"></i> : 
         			{{#if invite.accepted}}
-        					Accepted <i class="fa fa-check green"></i> 
+        					<i class="fa fa-check green"></i> Accepted 
         			{{else}}
-									Not Accepted Yet <i class="fa fa-times red"></i> 
+									<i class="fa fa-times red"></i> Not yet accepted  
         			{{/if}}{{moment-from-now invite.acceptedDate}}</p>
         	
         </div>

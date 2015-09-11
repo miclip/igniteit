@@ -10,6 +10,7 @@ export default DS.Model.extend({
 	emailSentDate: DS.attr('date'),
 	accepted: DS.attr('boolean'),
 	acceptedDate: DS.attr('date'),
+	parentId:DS.attr('string'),
   role: DS.attr('string'),
   owner:DS.attr('string'),
 	createdDate: DS.attr('date', {

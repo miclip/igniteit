@@ -17,11 +17,18 @@ export default Ember.Controller.extend({
 					    				user.save();
 					    			});
 								});
-
 						self.get('store').findRecord('organization',organizationId).then((organization)=>{
 							organization.get('trainers').removeObject(model);
 							organization.save();
 						});
+						// delete invites to trainer 
+						// TODO Trainer has accepted 
+						self.get('store').query('invite',{orderBy: 'parentId', startAt:model.get('id'), endAt:model.get('id')}).then((invites)=>{
+							invites.forEach((invite)=>{
+								invite.destroyRecord();
+							});
+						});
+
 				});
 				self.notifications.addNotification({
 			  message: 'Trainer successfully deleted!',

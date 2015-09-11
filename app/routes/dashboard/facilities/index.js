@@ -10,7 +10,6 @@ export default AuthBase.extend({
 			self.store.findRecord('user',uid).then((user)=>{
 		   	 user.get('facilities').then((facilities)=>{
 		   	 		user.get('addresses').then(()=>{
-
 		   	 			resolve(facilities);
 		   	 		});
 		   	 });
