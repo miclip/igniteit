@@ -12,10 +12,52 @@ actions:{
 	    				address.save();
 	    			});
 
-							self.notifications.addNotification({
-				      message: 'Trainer successfully saved!',
-				      type: 'success',
-				      autoClear: true,
+						var changed = model.changedAttributes();
+						
+	    			self.store.findRecord('organization',model.get('organizationId')).then((org)=>{
+
+	    					if(changed['organizationId']){
+				    			// update previous organization and save 	    			
+				    			self.store.findRecord('organization',changed['organizationId'][0]).then((previousOrg)=>{
+				    				previousOrg.get('trainers').removeObject(model);
+				    				previousOrg.save();
+				    			});
+				    			
+			    				org.get('trainers').pushObject(model);
+			    				org.save();   
+	    					} 
+		    				
+		    				model.get('invite').then((invite)=>{
+												
+												if(invite.get('email')){
+													invite.set('parentId',model.id);
+													invite.set('organization',org);
+													invite.set('name',model.get('name'));
+													invite.save();
+													
+													//TODO Send Invite Email
+
+													invite.set('emailSent', true);
+													invite.set('emailSentDate', new Date());
+													invite.save();
+						
+													self.notifications.addNotification({
+											      message: 'Invite Email Sent!',
+											      type: 'success',
+											      autoClear: true,
+										    	});
+												} else {
+													model.get('invite').then((invite)=>{
+														invite.destroyRecord();
+													});
+												}
+											});
+
+								self.notifications.addNotification({
+					      message: 'Trainer successfully saved!',
+					      type: 'success',
+					      autoClear: true,
+				      });	   
 			    	});
 						self.transitionToRoute('dashboard.trainers.index');
 				}).catch(function(err){

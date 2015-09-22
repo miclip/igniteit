@@ -1,0 +1,21 @@
+{{outlet}}	
+<div class="row">
+  {{#each model as |client|}}
+    <div class="col-md-5 col-lg-4">
+    	<div class="card card-inverse card-client">
+        <div class="card-block">
+          <div class="card-edits  card-client">
+            {{#link-to 'dashboard.clients.edit' client.id class="btn"}}<i class="fa fa-edit" tooltip="Edit Client"></i>{{/link-to}}
+            <a class="btn" {{action 'showModal' 'confirm-delete' client}}><i class="fa fa-trash" tooltip="Delete Client"></i></a>
+          </div>
+          <h3 class="card-title">{{client.name}}</h3>
+        </div>
+        {{img-liquid image=client.image fill=true horizontalAlign="center" verticalAlign="50%"}}
+        <div class="card-block">
+       
+        </div>
+      </div>
+    </div>
+  {{/each}}
+</div>
+

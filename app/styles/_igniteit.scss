@@ -290,6 +290,8 @@ nav {
 .card-organization{ @extend .card-entity; }
 .card-facility{ @extend .card-entity; }
 .card-invite{ @extend .card-entity; }
+.card-client{ @extend .card-entity; }
+.card-trainer{ @extend .card-entity; }
 
 .card-edits{
   position:relative;

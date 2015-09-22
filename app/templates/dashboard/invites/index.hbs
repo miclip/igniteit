@@ -17,19 +17,19 @@
           <h3 class="card-title">{{invite.name}}</h3>
         </div>        
         <div class="card-block">
-        	<p class="card-text"><i class="fa fa-university"></i> : {{invite.organization.name}}</p>
-        	<p class="card-text"><i class="fa fa-envelope"></i> : {{invite.email}}</p>
-        	<p class="card-text"><i class="fa fa-paper-plane"></i> : 
+        	<p class="card-text"><i class="fa fa-university"></i> <span class="p-r"></span>{{invite.organization.name}}</p>
+        	<p class="card-text"><i class="fa fa-envelope"></i> <span class="p-r"></span>{{invite.email}}</p>
+        	<p class="card-text">
         			{{#if invite.emailSent}}
-        					<i class="fa fa-check green"></i> Sent 
+        					<i class="fa fa-paper-plane green"></i> <span class="p-r"></span> Sent
         			{{else}}
-									<i class="fa fa-times red"></i> Not sent 
-        			{{/if}}{{moment-from-now invite.emailSentDate}}</p>
-        	<p class="card-text"><i class="fa fa-user-plus"></i> : 
+									<i class="fa fa-paper-plane red"></i> <span class="p-r"></span> Not sent 
+        			{{/if}} {{moment-from-now invite.emailSentDate}}</p>
+        	<p class="card-text">  
         			{{#if invite.accepted}}
-        					<i class="fa fa-check green"></i> Accepted 
+        					<i class="fa fa-user-plus green"></i> <span class="p-r"></span>Accepted 
         			{{else}}
-									<i class="fa fa-times red"></i> Not yet accepted  
+									<i class="fa fa-user-plus red"></i> <span class="p-r"></span>Not yet accepted  
         			{{/if}}{{moment-from-now invite.acceptedDate}}</p>
         	
         </div>

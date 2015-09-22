@@ -2,11 +2,11 @@
 <div class="row">
   {{#each model as |trainer|}}
     <div class="col-md-5 col-lg-4">
-    	<div class="card card-inverse card-organization">
+    	<div class="card card-inverse card-trainer">
         <div class="card-block">
-          <div class="card-edits  card-organization">
-            {{#link-to 'dashboard.organizations.edit' trainer class="btn"}}<i class="fa fa-edit" tooltip="Edit Organization"></i>{{/link-to}}
-            <a class="btn" {{action 'showModal' 'confirm-delete' trainer}}><i class="fa fa-trash" tooltip="Delete traineranization"></i></a>
+          <div class="card-edits  card-trainer">
+            {{#link-to 'dashboard.trainers.edit' trainer.id class="btn"}}<i class="fa fa-edit" tooltip="Edit Trainer"></i>{{/link-to}}
+            <a class="btn" {{action 'showModal' 'confirm-delete' trainer}}><i class="fa fa-trash" tooltip="Delete Trainer"></i></a>
           </div>
           <h3 class="card-title">{{trainer.name}}</h3>
         </div>

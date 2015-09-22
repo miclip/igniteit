@@ -1,4 +1,5 @@
-import Ember from 'ember';
+import AuthParentBase from './parent-auth';
 
-export default Ember.Route.extend({
+export default AuthParentBase.extend({
+  currentController:'dashboard.invites',
 });

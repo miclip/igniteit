@@ -1,0 +1,50 @@
+<h2>{{actionName}}</h2>
+{{#if model.errors}}
+	{{display-errors errors=model.errors}}
+{{/if}}
+
+{{validated-select2-group content=content
+    optionValuePath="id" optionLabelPath="text"
+    placeholder="Choose Organization" required="true" name="organizationId" hasValidationErrors=hasValidationErrors labelText="Select Organization:" value=model.organizationId errors=errors.validationModel.organizationId allowClear=true}}
+
+{{validated-input-group type="text" placeholder="Enter name" required="true" name="name" hasValidationErrors=hasValidationErrors labelText="Name:" value=model.name errors=errors.validationModel.name}}
+<div class="card ">
+	<div class="card-block">
+		<div class="card-title">
+			<h4>Invite </h4>
+		</div>  
+	  <div class="row">
+			<div class="col-md-12"> 
+				<div class="form-inline">
+					 <div class="form-group">
+							{{label "This is you?" for=userIsTrainer class='form-control-label'}}
+							{{bs-switch name="my-bs-switch" btnSize="small" status=userIsTrainer callback=callback onText="Yes" offText="No" class="form-control" }}
+					</div>
+				</div>
+			</div>
+			</div>
+			<div class={{if userIsTrainer "card-block create-invite display-none" "card-block create-invite showing-invite"}}>
+				<div class="row">
+					 <h5 class="card-title">Create Invite: </h5>
+					<div class="col-md-12">
+						<div class="form-inline">
+							<div class="row">													
+								<div class="col-md-12">
+								{{label "Email:" for=model.invite.email class="form-control-label"}}
+								{{input name=model.invite.email value=model.invite.email type="email" class="form-control input-large"}}
+								</div>									
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>	
+	</div>
+</div>
+{{address-edit model=model addressTitle='Home'  hasValidationErrors=hasValidationErrors errors=errors}}
+<div class="form-group">
+	{{image-drop image=model.image placeholder="Trainer Picture" helpText="Drop your image here, or click to select"}}
+</div>
+<p>
+	<button class="btn btn-primary" type='submit'>Save Trainer</button>
+{{#link-to "dashboard.trainers" class="btn btn-link"}}Cancel{{/link-to}}
+</p>			
