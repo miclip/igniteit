@@ -10,7 +10,7 @@ export default AuthBase.extend({
 		 	self.store.findRecord('client',params.client_id).then((client)=>{
 			 	client.get('invite').then((invite)=>{
 			 		if(!invite){
-			 			var invite = self.store.createRecord('invite', {invitedBy: user,role:'client',owner: uid });
+			 			invite = self.store.createRecord('invite', {invitedBy: user,role:'client',owner: uid });
 		 				client.set('invite',invite);
 			 		}
 			 		resolve(client);
