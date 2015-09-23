@@ -10,8 +10,15 @@ validations: {
     'validationModel.name': {
       presence: {message: " Name is required"},
     },
-    'validationModel.rate': {
-      presence: {message: " Rate is required"},
+    'validationModel.rateId': {
+      presence: {message: " Must select a Rate"},
+    },
+    'validationModel.discount': {
+      presence: {message: " Discount is required"},
+      numericality:{ messages: { numericality: ' Must be a number' } },
+    },
+    'validationModel.numberOfSessions': {
+      presence: {message: " # Sessions is required"},
       numericality:{ messages: { numericality: ' Must be a number' } },
     },
     'validationModel.organizationId':{

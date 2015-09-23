@@ -31,8 +31,14 @@ Router.map(function() {
       this.route('add');
       this.route('edit',{path: '/edit/:rate_id'});
     });
-    this.route('packages');
-    this.route('sessions');
+    this.route('packages', function() {
+      this.route('edit',{path: '/edit/:package_id'});
+      this.route('add');
+    });
+    this.route('sessions', function() {
+      this.route('add');
+      this.route('edit',{path: '/edit/:session_id'});
+    });
     this.route('today');
     this.route('invites', function() {
       this.route('edit',{path: '/edit/:invite_id'});

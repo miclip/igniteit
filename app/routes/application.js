@@ -6,9 +6,7 @@ export default Ember.Route.extend({
     // save transition to return post login
     this.get("session").fetch().catch(function() {});
     this.saveTransition(transition);
-
-    this.notifications.setDefaultClearNotification(3000);
-    
+    this.notifications.setDefaultClearNotification(2500);
   },
   actions: {
 	// global signout action  

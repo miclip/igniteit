@@ -1,25 +1,21 @@
 import AuthBase from '../../authenticated-base';
-import Ember from 'ember';
 
 export default AuthBase.extend({
-	model: function(params){
-		var self = this;
-		return new Ember.RSVP.Promise(function(resolve) {
-		 	self.store.findRecord('rate',params.rate_id).then((rate)=>{
-			 	resolve(rate);
-		  });
-		});
-	},
-	deactivate: function(){
-		var model = this.get('controller.model');
-		if(model.get('isNew')){
-			model.deleteRecord();
-		}			
+	model: function(){
+	 var uid = this.get('session').get('currentUser').get('id');
+   return this.store.createRecord('package',{
+   		owner: uid
+   });
+ },
+ deactivate: function(){
+			var model = this.get('controller.model');
+			if(model.get('isNew')){
+				model.deleteRecord();
+			}			
 	},
 	setupController:function(controller, model){
     controller.set('model', model);
     var self = this;
-    // set user orgs for select2
 		var uid = self.get('session').get('currentUser').get('id');
 		self.store.findRecord('user',uid).then((user)=>{
 		   	 user.get('organizations').then((organizations)=>{
@@ -29,8 +25,6 @@ export default AuthBase.extend({
 		   	 		});
 		   	    controller.set('userOrganizations', options);
 		   	});
-	 	});
+	 });
 	},
-
 });
-

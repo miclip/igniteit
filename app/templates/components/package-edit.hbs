@@ -1,0 +1,31 @@
+<h2>{{actionName}}</h2>
+{{#if model.errors}}
+	{{display-errors errors=model.errors}}
+{{/if}}
+
+{{validated-select2-group content=content
+    optionValuePath="id" optionLabelPath="text"
+    placeholder="Choose Organization" required="true" name="organizationId" hasValidationErrors=hasValidationErrors labelText="Select Organization:" value=model.organizationId errors=errors.validationModel.organizationId allowClear=true}}
+
+{{validated-input-group type="text" placeholder="Enter name" required="true" name="name" hasValidationErrors=hasValidationErrors labelText="Name:" value=model.name errors=errors.validationModel.name}}
+
+{{validated-select2-group content=content
+    optionValuePath="id" optionLabelPath="text"
+    placeholder="Choose Rate" required="true" name="rate" hasValidationErrors=hasValidationErrors labelText="Select Rate:" value=model.rateId errors=errors.validationModel.rateId allowClear=true}}
+
+<div class="row">
+	<div class="col-md-6">
+			{{validated-input-group type="text" placeholder="Enter discount" required="true" name="discount" hasValidationErrors=hasValidationErrors labelText="Discount:" value=model.discount errors=errors.validationModel.discount}}
+	</div>
+	<div class="col-md-6">
+		{{validated-input-group type="text" placeholder="Enter # of Sessions" required="true" name="numberOfSessions" hasValidationErrors=hasValidationErrors labelText="Number of sessions:" value=model.numberOfSessions errors=errors.validationModel.numberOfSessions}}
+	</div>
+</div>
+
+<div class="form-group">
+	{{image-drop image=model.image placeholder="Package Picture" helpText="Drop your image here, or click to select"}}
+</div>
+<p>
+	<button class="btn btn-primary" type='submit'>Save Package</button>
+{{#link-to "dashboard.rates" class="btn btn-link"}}Cancel{{/link-to}}
+</p>			

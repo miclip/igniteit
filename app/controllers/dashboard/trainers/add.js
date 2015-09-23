@@ -48,7 +48,6 @@ actions:{
 								      autoClear: true,
 							    	});
 
-
 										} else {
 											model.get('invite').then((invite)=>{
 												invite.destroyRecord();
@@ -65,9 +64,7 @@ actions:{
 				      type: 'success',
 				      autoClear: true,
 			    	});
-
-						
-
+							
 						self.transitionToRoute('dashboard.trainers.index');
 				}).catch(function(err){
 					console.log("errors:"+err);
