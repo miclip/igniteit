@@ -7,7 +7,6 @@ actions:{
 			
 			self.validate().then(function(){
 				model.save().then(function(){
-					  var uid = self.get('session').get('currentUser').get('id');
 								
 					  var changed = model.changedAttributes();
 	    			if(changed['organizationId']){

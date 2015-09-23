@@ -29,32 +29,30 @@ actions:{
 		    				
 		    				model.get('invite').then((invite)=>{
 												
-												if(invite.get('email')){
-													invite.set('parentId',model.id);
-													invite.set('organization',org);
-													invite.set('name',model.get('name'));
-													invite.save();
-													
-													//TODO Send Invite Email
+									if(invite.get('email')){
+										invite.set('parentId',model.id);
+										invite.set('organization',org);
+										invite.set('name',model.get('name'));
+										invite.save();
+										
+										//TODO Send Invite Email
 
-													if(invite.get('emailSent')===false)
-													{
-														invite.set('emailSent', true);
-														invite.set('emailSentDate', new Date());
-														invite.save();
-							
-														self.notifications.addNotification({
-												      message: 'Invite Email Sent!',
-												      type: 'success',
-												      autoClear: true,
-											    	});
-													}
-												} else {
-													model.get('invite').then((invite)=>{
-														invite.destroyRecord();
-													});
-												}
+										if(invite.get('emailSent')===false)
+										{
+											invite.set('emailSent', true);
+											invite.set('emailSentDate', new Date());
+											invite.save();
+				
+											self.notifications.addNotification({
+												message: 'Invite Email Sent!',
+												type: 'success',
+												autoClear: true,
 											});
+										}
+									} else {
+										invite.destroyRecord();
+									}
+								});
 
 								self.notifications.addNotification({
 					      message: 'Client successfully saved!',
@@ -67,7 +65,7 @@ actions:{
 					console.log("errors:"+err);
 				});
 			}).catch(function(){
-  		console.log('unepxected validation errors');
+				console.log('unepxected validation errors');
 		  	self.set('hasValidationErrors',true);
   	});
 	},

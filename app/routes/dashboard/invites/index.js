@@ -6,11 +6,9 @@ export default AuthBase.extend({
 		var self = this;
 		return new Ember.RSVP.Promise(function(resolve) {
 			var uid = self.get('session').get('currentUser').get('id');
-			self.store.findRecord('user',uid).then((user)=>{
-		   	 self.store.query('invite',{orderBy:'invitedBy', startAt:uid, endAt:uid}).then((invites)=>{
+				self.store.query('invite',{orderBy:'invitedBy', startAt:uid, endAt:uid}).then((invites)=>{
 		   	   resolve(invites);
-		   	 });
-	    });
-    });  
+		   	});
+	  });  
 	}
 });
