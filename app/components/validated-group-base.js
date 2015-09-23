@@ -8,7 +8,7 @@ export default Ember.Component.extend({
    		}
  },
 hasErrors:function(){
- return	this.get('errors') != null && this.get('errors').length>0;
+ return	this.get('errors') != null && this.get('errors').length > 0;
 }.property('errors'),
 hasSuccess:function(){ 
 	return ( !this.get('hasErrors') ||
@@ -16,7 +16,7 @@ hasSuccess:function(){
 }.property('name','value','errors'),
 onErrors: function () {	
   	this.set("showError", this.get('hasErrors'));  
-   				this.set("showSuccess", this.get('hasSuccess')); 
+   	this.set("showSuccess", this.get('hasSuccess')); 
 }.observes('hasValidationErrors'),
 
 

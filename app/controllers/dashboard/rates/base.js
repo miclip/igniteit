@@ -6,6 +6,7 @@ validationModel: Ember.computed.alias('model'),
 hasValidationErrors: false,
 addSuccess: false,
 userOrganizations: null,
+userOrganizationRates: null,
 validations: {
     'validationModel.name': {
       presence: {message: " Name is required"},
