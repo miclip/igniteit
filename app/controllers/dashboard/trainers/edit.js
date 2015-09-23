@@ -37,15 +37,19 @@ actions:{
 													
 													//TODO Send Invite Email
 
-													invite.set('emailSent', true);
-													invite.set('emailSentDate', new Date());
-													invite.save();
-						
-													self.notifications.addNotification({
-											      message: 'Invite Email Sent!',
-											      type: 'success',
-											      autoClear: true,
-										    	});
+													if(invite.get('emailSent')===false)
+													{
+														invite.set('emailSent', true);
+														invite.set('emailSentDate', new Date());
+														invite.save();
+							
+														self.notifications.addNotification({
+												      message: 'Invite Email Sent!',
+												      type: 'success',
+												      autoClear: true,
+											    	});
+													}
+													
 												} else {
 													model.get('invite').then((invite)=>{
 														invite.destroyRecord();

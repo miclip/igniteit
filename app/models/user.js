@@ -20,6 +20,6 @@ export default DS.Model.extend({
   addresses: DS.hasMany('address', {async : true}),
   trainers: DS.hasMany('trainer', {async : true}),
   clients: DS.hasMany('client', {async : true}),
-  
+  rates: DS.hasMany('rate', {async : true}),
 
 });

@@ -13,16 +13,7 @@
 		<div class="card-title">
 			<h4>Invite </h4>
 		</div>  
-	  <div class="row">
-			<div class="col-md-12"> 
-				<div class="form-inline">
-					 <div class="form-group">
-							{{label "This is you?" for=userIsTrainer class='form-control-label'}}
-							{{bs-switch name="my-bs-switch" btnSize="small" status=userIsTrainer callback=callback onText="Yes" offText="No" class="form-control" }}
-					</div>
-				</div>
-			</div>
-			</div>
+	
 			<div class={{if userIsTrainer "card-block create-invite display-none" "card-block create-invite showing-invite"}}>
 				<div class="row">
 					 <h5 class="card-title">Create Invite: </h5>
@@ -31,7 +22,7 @@
 							<div class="row">													
 								<div class="col-md-12">
 								{{label "Email:" for=model.invite.email class="form-control-label"}}
-								{{input name=model.invite.email value=model.invite.email type="email" class="form-control input-large"}}
+								{{input name=model.invite.email value=model.invite.email type="email" class="form-control"}}
 								</div>									
 							</div>
 						</div>
@@ -42,9 +33,9 @@
 </div>
 {{address-edit model=model addressTitle='Home'  hasValidationErrors=hasValidationErrors errors=errors}}
 <div class="form-group">
-	{{image-drop image=model.image placeholder="Trainer Picture" helpText="Drop your image here, or click to select"}}
+	{{image-drop image=model.image placeholder="Client Picture" helpText="Drop your image here, or click to select"}}
 </div>
 <p>
-	<button class="btn btn-primary" type='submit'>Save Trainer</button>
-{{#link-to "dashboard.trainers" class="btn btn-link"}}Cancel{{/link-to}}
+	<button class="btn btn-primary" type='submit'>Save Client</button>
+{{#link-to "dashboard.clients" class="btn btn-link"}}Cancel{{/link-to}}
 </p>			

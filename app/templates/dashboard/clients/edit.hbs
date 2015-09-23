@@ -1,1 +1,3 @@
-{{outlet}}
+<form {{action 'save' model on="submit" }}>
+{{client-edit model=model actionName='Edit' content=userOrganizations hasValidationErrors=hasValidationErrors errors=errors}}
+</form>

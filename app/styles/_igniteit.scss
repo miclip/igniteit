@@ -292,6 +292,9 @@ nav {
 .card-invite{ @extend .card-entity; }
 .card-client{ @extend .card-entity; }
 .card-trainer{ @extend .card-entity; }
+.card-rate{ @extend .card-entity; }
+.card-package{ @extend .card-entity; }
+.card-session{ @extend .card-entity; }
 
 .card-edits{
   position:relative;

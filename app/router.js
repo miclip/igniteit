@@ -27,7 +27,10 @@ Router.map(function() {
       this.route('edit',{path: '/edit/:client_id'});
       this.route('add');
     });
-    this.route('rates');
+    this.route('rates', function() {
+      this.route('add');
+      this.route('edit',{path: '/edit/:rate_id'});
+    });
     this.route('packages');
     this.route('sessions');
     this.route('today');

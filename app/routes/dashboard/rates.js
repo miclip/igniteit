@@ -1,4 +1,5 @@
-import AuthBase from '../authenticated-base';
+import AuthParentBase from './parent-auth';
 
-export default AuthBase.extend({
+export default AuthParentBase.extend({
+  currentController:'dashboard.rates',
 });
