@@ -21,5 +21,6 @@ export default DS.Model.extend({
   trainers: DS.hasMany('trainer', {async : true}),
   clients: DS.hasMany('client', {async : true}),
   rates: DS.hasMany('rate', {async : true}),
-
+  packages: DS.hasMany('package', {async : true}),
+  session: DS.hasMany('session', {async : true}),
 });

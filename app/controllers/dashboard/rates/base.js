@@ -6,7 +6,6 @@ validationModel: Ember.computed.alias('model'),
 hasValidationErrors: false,
 addSuccess: false,
 userOrganizations: null,
-userOrganizationRates: null,
 validations: {
     'validationModel.name': {
       presence: {message: " Name is required"},
@@ -19,5 +18,9 @@ validations: {
     	presence: {message: " Must select an organization"},
     },
 },
-
+organizationName:function(){
+  this.store.findRecord('organization',this.get('model.organizationId')).then((organization)=>{
+    return organization.get('name');
+  });
+}.property('model.organizationId')
 });

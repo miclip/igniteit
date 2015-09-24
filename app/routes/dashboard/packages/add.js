@@ -18,13 +18,13 @@ export default AuthBase.extend({
     var self = this;
 		var uid = self.get('session').get('currentUser').get('id');
 		self.store.findRecord('user',uid).then((user)=>{
-		   	 user.get('organizations').then((organizations)=>{
-		   	 		var options = [];
-		   	 		organizations.forEach(function(org){
-		   	 				options.push({id:org.id,text:org.get('name')});
-		   	 		});
-		   	    controller.set('userOrganizations', options);
-		   	});
+		 	 user.get('organizations').then((organizations)=>{
+		 	 		var options = [];
+		 	 		organizations.forEach(function(org){
+		 	 				options.push({id:org.id,text:org.get('name')});
+		 	 		});
+		 	    controller.set('userOrganizations', options);
+		 	});
 	 });
 	},
 	

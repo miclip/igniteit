@@ -7,6 +7,11 @@ actions:{
 			
 			self.validate().then(function(){
 				model.save().then(function(){
+
+					self.store.findRecord('rate', model.get('rateId')).then((rate)=>{
+						model.set('rate',rate);
+						model.save();
+					});
 				  var uid = self.get('session').get('currentUser').get('id');
 					// save the address
 					self.store.findRecord('user',uid).then((user)=>{

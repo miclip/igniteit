@@ -1,1 +1,3 @@
-{{outlet}}
+<form {{action 'save' model on="submit" }}>
+	{{package-edit model=model actionName='Edit' contentRates=userOrganizationRates content=userOrganizations hasValidationErrors=hasValidationErrors errors=errors}}
+</form>

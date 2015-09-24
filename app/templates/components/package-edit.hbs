@@ -9,7 +9,7 @@
 
 {{validated-input-group type="text" placeholder="Enter name" required="true" name="name" hasValidationErrors=hasValidationErrors labelText="Name:" value=model.name errors=errors.validationModel.name}}
 
-{{validated-select2-group content=userOrganizationRates
+{{validated-select2-group content=contentRates
     optionValuePath="id" optionLabelPath="text"
     placeholder="Choose Rate" required="true" name="rate"  hasValidationErrors=hasValidationErrors labelText="Select Rate:" value=model.rateId errors=errors.validationModel.rateId allowClear=true}}
 

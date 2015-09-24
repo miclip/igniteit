@@ -1,1 +1,21 @@
-{{outlet}}
+{{outlet}}	
+<div class="row">
+  {{#each model as |package|}}
+    <div class="col-md-5 col-lg-4">
+    	<div class="card card-inverse card-package">
+        <div class="card-block">
+          <div class="card-edits  card-package">
+            {{#link-to 'dashboard.packages.edit' package.id class="btn"}}<i class="fa fa-edit" tooltip="Edit Package"></i>{{/link-to}}
+            <a class="btn" {{action 'showModal' 'confirm-delete' package}}><i class="fa fa-trash" tooltip="Delete Package"></i></a>
+          </div>
+          <h3 class="card-title">{{package.name}}</h3>
+        </div>
+         {{img-liquid image=package.image fill=true horizontalAlign="center" verticalAlign="50%"}}
+        <div class="card-block">
+       
+        </div>
+      </div>
+    </div>
+  {{/each}}
+</div>
+

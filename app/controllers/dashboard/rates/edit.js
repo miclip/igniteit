@@ -9,16 +9,16 @@ actions:{
 				model.save().then(function(){
 								
 					  var changed = model.changedAttributes();
-	    			if(changed['organizationId']){
+	    			if(changed['organizationId']){	    				
 		    			    			
 		    			self.store.findRecord('organization',changed['organizationId'][0]).then((previousOrg)=>{
 		    				previousOrg.get('rates').removeObject(model);
 		    				previousOrg.save();
 		    			});
 		    			
-		    			self.store.findRecord('organization',model.get('organizationId')).then((org)=>{
-	    					org.get('rates').pushObject(model);
-	    					org.save();   
+		    			self.store.findRecord('organization',model.get('organizationId')).then((organization)=>{
+	    					organization.get('rates').pushObject(model);
+	    					organization.save();  
 	    				});
 	    			}   			
 

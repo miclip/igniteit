@@ -1,23 +1,7 @@
 import Base from './base';
 
 export default Base.extend({
-onOrganizationChange: function () {	
-		var self = this;
-	  var organizationId = this.get('model.organizationId');
-		alert('hi '+organizationId);
-		
-		self.store.findRecord('organization',organizationId).then((organization)=>{
-			organization.get('rates').then((rates)=>{
-				var options = [];
-				rates.forEach(function(rate){
-						options.push({id:rate.id,text:rate.get('name')});
-				});
-				alert('hi'+options[0]);
-				self.set('selectRates', options);
-			});
-		
-		});
-	}.observes('model.organizationId'),
+
 actions:{
 	save:function(model){
 			var self = this;
