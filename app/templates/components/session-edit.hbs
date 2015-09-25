@@ -1,0 +1,40 @@
+<h2>{{actionName}}</h2>
+{{#if model.errors}}
+	{{display-errors errors=model.errors}}
+{{/if}}
+
+{{validated-select2-group content=content
+    optionValuePath="id" optionLabelPath="text"
+    placeholder="Choose Organization" required="true" name="organizationId" hasValidationErrors=hasValidationErrors labelText="Select Organization:" value=model.organizationId errors=errors.validationModel.organizationId allowClear=true}}
+
+{{validated-select2-group content=contentClients
+    optionValuePath="id" optionLabelPath="text"
+    placeholder="Choose Client" required="true" name="client"  hasValidationErrors=hasValidationErrors labelText="Select Client:" value=model.clientId errors=errors.validationModel.clientId allowClear=true}}
+
+ <div class="row">
+	<div class="col-md-6">
+			{{validated-input-group type="text" placeholder="Select Date" required="true" name="discount" hasValidationErrors=hasValidationErrors labelText="Select Date & Time:" value=model.sessionDateTime errors=errors.validationModel.sessionDateTime}}
+	</div>
+	<div class="col-md-6">
+		{{validated-input-group type="text" placeholder="Enter duration" required="true" name="sessionDurationMinutes" hasValidationErrors=hasValidationErrors labelText="Session Duration:" value=model.sessionDurationMinutes errors=errors.validationModel.sessionDurationMinutes}}
+	</div>
+</div>
+
+{{validated-select2-group content=contentRates
+    optionValuePath="id" optionLabelPath="text"
+    placeholder="Choose Rate" required="true" name="rate"  hasValidationErrors=hasValidationErrors labelText="Select Rate:" value=model.rateId errors=errors.validationModel.rateId allowClear=true}}
+
+<div class="row">
+	<div class="col-md-6">
+			{{validated-input-group type="text" placeholder="Enter discount" required="true" name="discount" hasValidationErrors=hasValidationErrors labelText="Discount:" value=model.discount errors=errors.validationModel.discount}}
+	</div>
+	<div class="col-md-6">
+		{{validated-input-group type="text" placeholder="Enter # of Sessions" required="true" name="numberOfSessions" hasValidationErrors=hasValidationErrors labelText="Number of sessions:" value=model.numberOfSessions errors=errors.validationModel.numberOfSessions}}
+	</div>
+</div>
+
+
+<p>
+	<button class="btn btn-primary" type='submit'>Save Session</button>
+{{#link-to "dashboard.sessions" class="btn btn-link"}}Cancel{{/link-to}}
+</p>			

@@ -1,1 +1,3 @@
-{{outlet}}
+<form {{action 'save' model on="submit" }}>
+	{{session-edit model=model actionName='Add' contentRates=userOrganizationRates content=userOrganizations hasValidationErrors=hasValidationErrors errors=errors}}
+</form>

@@ -4,6 +4,22 @@
 		"selected_items":
 		[
 			[
+				"or",
+				"organizationId"
+			],
+			[
+				"o",
+				"organizationId"
+			],
+			[
+				"org",
+				"organization"
+			],
+			[
+				"tra",
+				"trainer"
+			],
+			[
 				"car",
 				"card-entity"
 			],
@@ -22,14 +38,6 @@
 			[
 				"trainer",
 				"trainers"
-			],
-			[
-				"or",
-				"organizationId"
-			],
-			[
-				"org",
-				"Organization"
 			],
 			[
 				"fac",
@@ -100,82 +108,74 @@
 	"buffers":
 	[
 		{
-			"file": "app/templates/confirm-delete.hbs",
+			"file": "app/models/training-session.js",
 			"settings":
 			{
-				"buffer_size": 308,
+				"buffer_size": 763,
 				"line_ending": "Windows"
 			}
 		},
 		{
-			"file": "app/templates/dashboard/invites/index.hbs",
+			"file": "app/routes/dashboard/sessions/index.js",
 			"settings":
 			{
-				"buffer_size": 1788,
+				"buffer_size": 428,
 				"line_ending": "Unix"
 			}
 		},
 		{
-			"file": "app/router.js",
+			"file": "app/models/user.js",
 			"settings":
 			{
-				"buffer_size": 1172,
+				"buffer_size": 972,
 				"line_ending": "Windows"
 			}
 		},
 		{
-			"file": "app/styles/_igniteit.scss",
+			"file": "app/models/organization.js",
 			"settings":
 			{
-				"buffer_size": 5500,
+				"buffer_size": 578,
 				"line_ending": "Windows"
 			}
 		},
 		{
-			"file": "app/models/invite.js",
+			"file": "app/templates/dashboard/sessions/index.hbs",
 			"settings":
 			{
-				"buffer_size": 665,
-				"line_ending": "Windows"
-			}
-		},
-		{
-			"file": "app/controllers/dashboard/trainers/add.js",
-			"settings":
-			{
-				"buffer_size": 2283,
-				"line_ending": "Windows"
-			}
-		},
-		{
-			"file": "app/controllers/dashboard/trainers.js",
-			"settings":
-			{
-				"buffer_size": 1423,
+				"buffer_size": 761,
 				"line_ending": "Unix"
 			}
 		},
 		{
-			"file": "app/routes/dashboard/invites/index.js",
+			"file": "app/templates/dashboard/sessions.hbs",
 			"settings":
 			{
-				"buffer_size": 478,
+				"buffer_size": 359,
 				"line_ending": "Unix"
 			}
 		},
 		{
-			"file": "app/routes/dashboard/facilities/index.js",
+			"file": "app/templates/dashboard/sessions/add.hbs",
 			"settings":
 			{
-				"buffer_size": 490,
+				"buffer_size": 213,
 				"line_ending": "Unix"
 			}
 		},
 		{
-			"file": "app/routes/dashboard/trainers/add.js",
+			"file": "app/controllers/dashboard/sessions/base.js",
 			"settings":
 			{
-				"buffer_size": 1860,
+				"buffer_size": 1026,
+				"line_ending": "Windows"
+			}
+		},
+		{
+			"file": "app/controllers/dashboard/sessions/add.js",
+			"settings":
+			{
+				"buffer_size": 1216,
 				"line_ending": "Unix"
 			}
 		}
@@ -232,35 +232,92 @@
 	},
 	"file_history":
 	[
-		"/C/Projects/Ember/igniteit/app/templates/confirm-resend.hbs",
-		"/C/Projects/Ember/igniteit/app/styles/_igniteit.scss",
+		"/C/Projects/Ember/igniteit/app/templates/components/session-edit.js",
+		"/C/Projects/Ember/igniteit/app/models/rate.js",
+		"/C/Projects/Ember/igniteit/app/templates/dashboard/rates/index.hbs",
+		"/C/Projects/Ember/igniteit/app/controllers/dashboard/rates/base.js",
+		"/C/Projects/Ember/igniteit/app/models/package.js",
+		"/C/Projects/Ember/igniteit/app/models/facility.js",
+		"/C/Projects/Ember/igniteit/app/models/client.js",
+		"/C/Projects/Ember/igniteit/app/helpers/organizationname.js",
+		"/C/Projects/Ember/igniteit/app/helpers/organizationName.js",
+		"/C/Projects/Ember/igniteit/app/controllers/dashboard/rates/index.js",
+		"/C/Projects/Ember/igniteit/app/components/validated-group-base.js",
+		"/C/Projects/Ember/igniteit/app/controllers/dashboard/packages/add.js",
+		"/C/Projects/Ember/igniteit/app/controllers/dashboard/rates/edit.js",
+		"/C/Projects/Ember/igniteit/app/controllers/dashboard/rates/add.js",
+		"/C/Projects/Ember/igniteit/app/controllers/dashboard/packages/edit.js",
+		"/C/Projects/Ember/igniteit/app/controllers/dashboard/packages.js",
+		"/C/Projects/Ember/igniteit/app/controllers/dashboard/packages/base.js",
+		"/C/Projects/Ember/igniteit/app/routes/dashboard/packages/add.js",
+		"/C/Projects/Ember/igniteit/app/templates/components/package-edit.hbs",
+		"/C/Projects/Ember/igniteit/app/templates/dashboard/packages/add.hbs",
+		"/C/Projects/Ember/igniteit/app/routes/dashboard/packages.js",
+		"/C/Projects/Ember/igniteit/app/routes/dashboard/packages/index.js",
+		"/C/Projects/Ember/igniteit/app/routes/dashboard/packages/edit.js",
+		"/C/Projects/Ember/igniteit/app/templates/dashboard/packages/edit.hbs",
+		"/C/Projects/Ember/igniteit/app/templates/dashboard/packages/index.hbs",
+		"/C/Projects/Ember/igniteit/app/models/user.js",
+		"/C/Projects/Ember/igniteit/app/models/organization.js",
+		"/C/Projects/Ember/igniteit/app/routes/authenticated-user.js",
+		"/C/Projects/Ember/igniteit/app/routes/application.js",
+		"/C/Projects/Ember/igniteit/app/components/img-liquid.js",
+		"/C/Projects/Ember/igniteit/app/router.js",
+		"/C/Projects/Ember/igniteit/app/templates/components/package.hbs",
+		"/C/Projects/Ember/igniteit/app/routes/dashboard/rates/add.js",
+		"/C/Projects/Ember/igniteit/app/routes/dashboard/rates/index.js",
+		"/C/Projects/Ember/igniteit/app/templates/components/rate-edit.hbs",
+		"/C/Projects/Ember/igniteit/app/templates/dashboard/rates/add.hbs",
+		"/C/Projects/Ember/igniteit/app/routes/dashboard/rates.js",
+		"/C/Projects/Ember/igniteit/app/controllers/dashboard/rates.js",
+		"/C/Projects/Ember/igniteit/app/routes/dashboard/rates/edit.js",
+		"/C/Projects/Ember/igniteit/app/templates/dashboard/rates/edit.hbs",
 		"/C/Projects/Ember/igniteit/app/controllers/dashboard/trainers/add.js",
+		"/C/Projects/Ember/igniteit/app/styles/_igniteit.scss",
+		"/C/Projects/Ember/igniteit/app/models/session.js",
+		"/C/Projects/Ember/igniteit/app/templates/components/client-edit.hbs",
+		"/C/Projects/Ember/igniteit/app/controllers/dashboard/clients/base.js",
+		"/C/Projects/Ember/igniteit/app/controllers/dashboard/clients/edit.js",
+		"/C/Projects/Ember/igniteit/app/templates/dashboard/clients/edit.hbs",
+		"/C/Projects/Ember/igniteit/app/templates/dashboard/clients/add.hbs",
+		"/C/Projects/Ember/igniteit/app/routes/dashboard/clients/edit.js",
+		"/C/Projects/Ember/igniteit/app/controllers/dashboard/trainers/edit.js",
+		"/C/Projects/Ember/igniteit/app/controllers/dashboard/clients/add.js",
+		"/C/Projects/Ember/igniteit/app/routes/dashboard/clients.js",
+		"/C/Projects/Ember/igniteit/app/routes/dashboard/clients/index.js",
+		"/C/Projects/Ember/igniteit/app/controllers/dashboard/clients.js",
+		"/C/Projects/Ember/igniteit/app/templates/dashboard/clients/index.hbs",
+		"/C/Projects/Ember/igniteit/app/templates/dashboard/trainers/index.hbs",
+		"/C/Projects/Ember/igniteit/app/templates/dashboard/clients.hbs",
+		"/C/Projects/Ember/igniteit/app/routes/dashboard/clients/add.js",
+		"/C/Projects/Ember/igniteit/app/templates/dashboard/invites/index.hbs",
+		"/C/Projects/Ember/igniteit/app/routes/dashboard/invites/edit.js",
+		"/C/Projects/Ember/igniteit/app/routes/dashboard/invites.js",
+		"/C/Projects/Ember/igniteit/app/routes/dashboard/trainers/edit.js",
+		"/C/Projects/Ember/igniteit/app/controllers/dashboard/invites.js",
+		"/C/Projects/Ember/igniteit/app/models/invite.js",
+		"/C/Projects/Ember/igniteit/app/templates/confirm-delete.hbs",
+		"/C/Projects/Ember/igniteit/app/controllers/dashboard/trainers.js",
+		"/C/Projects/Ember/igniteit/app/routes/dashboard/invites/index.js",
+		"/C/Projects/Ember/igniteit/app/routes/dashboard/facilities/index.js",
+		"/C/Projects/Ember/igniteit/app/routes/dashboard/trainers/add.js",
+		"/C/Projects/Ember/igniteit/app/templates/confirm-resend.hbs",
 		"/C/Projects/Ember/igniteit/bower_components/bootstrap/scss/_button-group.scss",
 		"/C/Projects/Ember/igniteit/bower_components/bootstrap/scss/_buttons.scss",
 		"/C/Projects/Ember/igniteit/bower_components/bootstrap/scss/_variables.scss",
 		"/C/Projects/Ember/igniteit/app/templates/components/trainer-edit.hbs",
 		"/C/Projects/Ember/igniteit/app/templates/components/address-edit.hbs",
-		"/C/Projects/Ember/igniteit/app/routes/dashboard/trainers/add.js",
 		"/C/Projects/Ember/igniteit/app/templates/dashboard/trainers/add.hbs",
 		"/C/Projects/Ember/igniteit/app/components/trainer-edit.js",
-		"/C/Projects/Ember/igniteit/app/templates/dashboard/invites/index.hbs",
-		"/C/Projects/Ember/igniteit/app/routes/dashboard/invites/index.js",
 		"/C/Projects/Ember/igniteit/app/helpers/increment.js",
-		"/C/Projects/Ember/igniteit/app/models/invite.js",
 		"/C/Projects/Ember/igniteit/config/environment.js",
-		"/C/Projects/Ember/igniteit/app/models/user.js",
 		"/C/Projects/Ember/igniteit/app/templates/dashboard/invites.hbs",
 		"/C/Projects/Ember/igniteit/app/templates/components/validated-input-group.hbs",
 		"/C/Projects/Ember/igniteit/app/templates/components/validated-select2-group.hbs",
 		"/C/Projects/Ember/igniteit/ember-cli-build.js",
 		"/C/Projects/Ember/igniteit/app/models/trainer.js",
 		"/C/Projects/Ember/igniteit/app/templates/dashboard.hbs",
-		"/C/Projects/Ember/igniteit/app/models/organization.js",
-		"/C/Projects/Ember/igniteit/app/controllers/dashboard/trainers/edit.js",
 		"/C/Projects/Ember/igniteit/app/templates/dashboard/trainers/edit.hbs",
-		"/C/Projects/Ember/igniteit/app/controllers/dashboard/trainers.js",
-		"/C/Projects/Ember/igniteit/app/templates/dashboard/trainers/index.hbs",
-		"/C/Projects/Ember/igniteit/app/router.js",
 		"/C/Projects/Ember/igniteit/app/routes/dashboard/trainers.js",
 		"/C/Projects/Ember/igniteit/app/routes/dashboard/trainers/index.js",
 		"/C/Projects/Ember/igniteit/app/templates/dashboard/trainers.hbs",
@@ -269,30 +326,25 @@
 		"/C/Projects/Ember/igniteit/app/controllers/dashboard/facilities/base.js",
 		"/C/Projects/Ember/igniteit/app/controllers/dashboard/trainers/base.js",
 		"/C/Projects/Ember/igniteit/app/routes/dashboard/facilities/add.js",
-		"/C/Projects/Ember/igniteit/app/routes/authenticated-user.js",
 		"/C/Projects/Ember/igniteit/app/routes/dashboard.js",
 		"/C/Projects/Ember/igniteit/app/routes/account/manage.js",
 		"/C/Projects/Ember/igniteit/app/routes/account/delete.js",
 		"/C/Projects/Ember/igniteit/app/controllers/dashboard/facilities.js",
 		"/C/Projects/Ember/igniteit/app/routes/dashboard/facilities.js",
-		"/C/Projects/Ember/igniteit/app/routes/dashboard/facilities/index.js",
 		"/C/Projects/Ember/igniteit/app/controllers/dashboard/organizations/base.js",
 		"/C/Projects/Ember/igniteit/app/controllers/dashboard/facilities/add.js",
 		"/C/Projects/Ember/igniteit/app/controllers/dashboard/facilities/edit.js",
 		"/C/Projects/Ember/igniteit/app/controllers/dashboard/organizations/add.js",
 		"/C/Projects/Ember/igniteit/app/controllers/dashboard/organizations/edit.js",
-		"/C/Projects/Ember/igniteit/app/models/facility.js",
 		"/C/Projects/Ember/igniteit/app/models/base.js",
 		"/C/Projects/Ember/igniteit/app/controllers/dashboard/facilities/facility-base.js",
 		"/C/Projects/Ember/igniteit/app/controllers/dashboard/organizations/organization-base.js",
 		"/C/Projects/Ember/igniteit/app/routes/dashboard/facilities/edit.js",
 		"/C/Projects/Ember/igniteit/app/templates/dashboard/facilities/edit.hbs",
 		"/C/Projects/Ember/igniteit/app/templates/dashboard/facilities/index.hbs",
-		"/C/Projects/Ember/igniteit/app/templates/confirm-delete.hbs",
 		"/C/Projects/Ember/igniteit/app/templates/components/modal-small.hbs",
 		"/C/Projects/Ember/igniteit/app/templates/components/facility-edit.hbs",
 		"/C/Projects/Ember/igniteit/app/models/address.js",
-		"/C/Projects/Ember/igniteit/app/routes/application.js",
 		"/C/Projects/Ember/igniteit/app/components/validated-select2-group.js",
 		"/C/Projects/Ember/igniteit/app/templates/dashboard/facilities/add.hbs",
 		"/C/Projects/Ember/igniteit/app/templates/dashboard/organizations/add.hbs",
@@ -303,63 +355,11 @@
 		"/C/Projects/Ember/igniteit/app/templates/components/organization-edit.hbs",
 		"/C/Projects/Ember/igniteit/app/components/organization-edit.js",
 		"/C/Projects/Ember/igniteit/app/templates/dashboard/organizations/edit.hbs",
-		"/C/Projects/Ember/igniteit/app/components/validated-group-base.js",
 		"/C/Projects/Ember/igniteit/app/components/select-2.js",
 		"/C/Projects/Ember/igniteit/bower.json",
 		"/C/Projects/Ember/igniteit/app/index.html",
 		"/C/Projects/Ember/igniteit/package.json",
-		"/C/Projects/Ember/igniteit/node_modules/ember-select-2/index.js",
-		"/C/Projects/Ember/igniteit/app/templates/dashboard/facilities.hbs",
-		"/C/Projects/Ember/igniteit/app/templates/application.hbs",
-		"/C/Projects/Ember/igniteit/app/templates/dashboard/organizations.hbs",
-		"/C/Projects/Ember/igniteit/app/controllers/dashboard/organizations.js",
-		"/C/Projects/Ember/igniteit/app/templates/dashboard/organizations/index.hbs",
-		"/C/Projects/Ember/igniteit/app/templates/components/img-liquid.hbs",
-		"/C/Projects/Ember/igniteit/app/components/img-liquid.js",
-		"/C/Projects/Ember/igniteit/app/routes/dashboard/parent-auth.js",
-		"/C/Projects/Ember/igniteit/app/routes/dashboard/organizations.js",
-		"/C/Projects/Ember/igniteit/tests/integration/components/modal-small-test.js",
-		"/C/Projects/Ember/igniteit/app/templates/card-organization.hbs",
-		"/C/Projects/Ember/igniteit/app/controllers/dashboard/organizations/delete.js",
-		"/C/Projects/Ember/igniteit/app/components/simple-modal.js",
-		"/C/Projects/Ember/igniteit/app/templates/dashboard/organizations/confirm-delete.hbs",
-		"/C/Projects/Ember/igniteit/app/templates/components/simple-modal.hbs",
-		"/C/Users/Michael Lipscombe/AppData/Roaming/npm-cache/ember-cli-notifications/2.1.2/package/package.json",
-		"/C/Projects/Ember/igniteit/npm-debug.log",
-		"/C/Projects/Ember/igniteit/node_modules/ember-cli-notifications/index.js",
-		"/C/Users/Michael Lipscombe/AppData/Roaming/npm-cache/ember-cli-notifications/2.1.2/packagetmp/package/package.json",
-		"/C/Projects/Ember/igniteit/app/transforms/array.js",
-		"/C/Projects/Ember/igniteit/app/styles/_custom-variables.scss",
-		"/C/Projects/Ember/igniteit/app/routes/dashboard/organizations/delete.js",
-		"/C/Projects/Ember/igniteit/app/routes/dashboard/organizations/edit.js",
-		"/C/Projects/Ember/igniteit/app/routes/dashboard/organizations/add.js",
-		"/C/Projects/Ember/igniteit/app/controllers/dashboard/organizations/new.js",
-		"/C/Projects/Ember/igniteit/app/templates/dashboard/organizations/new.hbs",
-		"/C/Projects/Ember/igniteit/app/controllers/register.js",
-		"/C/Projects/Ember/igniteit/app/routes/dashboard/organizations/new.js",
-		"/C/Projects/Ember/igniteit/app/app.js",
-		"/C/Projects/Ember/igniteit/app/routes/dashboard/clients.js",
-		"/C/Projects/Ember/igniteit/app/transforms/raw.js",
-		"/C/Projects/Ember/igniteit/app/routes/dashboard/today.js",
-		"/C/Projects/Ember/igniteit/app/routes/dashboard/sessions.js",
-		"/C/Projects/Ember/igniteit/app/routes/dashboard/rates.js",
-		"/C/Projects/Ember/igniteit/app/routes/dashboard/packages.js",
-		"/C/Projects/Ember/igniteit/app/routes/dashboard/index.js",
-		"/C/Projects/Ember/igniteit/app/templates/dashboard/index.hbs",
-		"/C/Projects/Ember/igniteit/app/templates/account.hbs",
-		"/C/Projects/Ember/igniteit/app/controllers/login.js",
-		"/C/Projects/Ember/igniteit/app/routes/login.js",
-		"/C/Projects/Ember/igniteit/app/routes/authenticated-base.js",
-		"/C/Projects/Ember/igniteit/app/templates/register.hbs",
-		"/C/Projects/Ember/igniteit/app/templates/reset.hbs",
-		"/C/Projects/Ember/igniteit/app/templates/login.hbs",
-		"/C/Projects/Ember/igniteit/README.md",
-		"/C/Projects/Ember/igniteit/firebase.json",
-		"/C/Projects/Ember/igniteit/tests/index.html",
-		"/C/Projects/Ember/igniteit/tests/acceptance/user-can-register-test.js",
-		"/C/Projects/Ember/igniteit/testem.json",
-		"/C/Projects/Ember/igniteit/app/styles/app.sscs",
-		"/C/Projects/Ember/igniteit/app/styles/ember-firebase-test.sscs"
+		"/C/Projects/Ember/igniteit/node_modules/ember-select-2/index.js"
 	],
 	"find":
 	{
@@ -399,28 +399,30 @@
 	"groups":
 	[
 		{
-			"selected": 9,
+			"selected": 8,
 			"sheets":
 			[
 				{
 					"buffer": 0,
-					"file": "app/templates/confirm-delete.hbs",
+					"file": "app/models/training-session.js",
 					"settings":
 					{
-						"buffer_size": 308,
+						"buffer_size": 763,
 						"regions":
 						{
 						},
 						"selection":
 						[
 							[
-								308,
-								0
+								244,
+								244
 							]
 						],
 						"settings":
 						{
-							"syntax": "Packages/Handlebars/grammars/Handlebars.tmLanguage"
+							"syntax": "Packages/JavaScript/JavaScript.tmLanguage",
+							"tab_size": 2,
+							"translate_tabs_to_spaces": true
 						},
 						"translation.x": 0.0,
 						"translation.y": 0.0,
@@ -430,24 +432,23 @@
 				},
 				{
 					"buffer": 1,
-					"file": "app/templates/dashboard/invites/index.hbs",
+					"file": "app/routes/dashboard/sessions/index.js",
 					"settings":
 					{
-						"buffer_size": 1788,
+						"buffer_size": 428,
 						"regions":
 						{
 						},
 						"selection":
 						[
 							[
-								742,
-								742
+								333,
+								349
 							]
 						],
 						"settings":
 						{
-							"syntax": "Packages/Handlebars/grammars/Handlebars.tmLanguage",
-							"translate_tabs_to_spaces": false
+							"syntax": "Packages/JavaScript/JavaScript.tmLanguage"
 						},
 						"translation.x": 0.0,
 						"translation.y": 0.0,
@@ -457,18 +458,18 @@
 				},
 				{
 					"buffer": 2,
-					"file": "app/router.js",
+					"file": "app/models/user.js",
 					"settings":
 					{
-						"buffer_size": 1172,
+						"buffer_size": 972,
 						"regions":
 						{
 						},
 						"selection":
 						[
 							[
-								758,
-								758
+								948,
+								948
 							]
 						],
 						"settings":
@@ -485,51 +486,51 @@
 				},
 				{
 					"buffer": 3,
-					"file": "app/styles/_igniteit.scss",
+					"file": "app/models/organization.js",
 					"settings":
 					{
-						"buffer_size": 5500,
+						"buffer_size": 578,
 						"regions":
 						{
 						},
 						"selection":
 						[
 							[
-								4998,
-								4998
+								554,
+								554
 							]
 						],
 						"settings":
 						{
-							"syntax": "Packages/Sass/Syntaxes/Sass.tmLanguage",
+							"syntax": "Packages/JavaScript/JavaScript.tmLanguage",
 							"tab_size": 2,
 							"translate_tabs_to_spaces": true
 						},
 						"translation.x": 0.0,
-						"translation.y": 4185.0,
+						"translation.y": 0.0,
 						"zoom_level": 1.0
 					},
 					"type": "text"
 				},
 				{
 					"buffer": 4,
-					"file": "app/models/invite.js",
+					"file": "app/templates/dashboard/sessions/index.hbs",
 					"settings":
 					{
-						"buffer_size": 665,
+						"buffer_size": 761,
 						"regions":
 						{
 						},
 						"selection":
 						[
 							[
-								405,
-								405
+								759,
+								759
 							]
 						],
 						"settings":
 						{
-							"syntax": "Packages/JavaScript/JavaScript.tmLanguage"
+							"syntax": "Packages/Handlebars/grammars/Handlebars.tmLanguage"
 						},
 						"translation.x": 0.0,
 						"translation.y": 0.0,
@@ -539,78 +540,77 @@
 				},
 				{
 					"buffer": 5,
-					"file": "app/controllers/dashboard/trainers/add.js",
+					"file": "app/templates/dashboard/sessions.hbs",
 					"settings":
 					{
-						"buffer_size": 2283,
+						"buffer_size": 359,
 						"regions":
 						{
 						},
 						"selection":
 						[
 							[
-								957,
-								957
+								81,
+								81
 							]
 						],
 						"settings":
 						{
-							"syntax": "Packages/JavaScript/JavaScript.tmLanguage",
-							"translate_tabs_to_spaces": false
+							"syntax": "Packages/Handlebars/grammars/Handlebars.tmLanguage"
 						},
 						"translation.x": 0.0,
-						"translation.y": 135.0,
+						"translation.y": 0.0,
 						"zoom_level": 1.0
 					},
 					"type": "text"
 				},
 				{
 					"buffer": 6,
-					"file": "app/controllers/dashboard/trainers.js",
+					"file": "app/templates/dashboard/sessions/add.hbs",
 					"settings":
 					{
-						"buffer_size": 1423,
+						"buffer_size": 213,
 						"regions":
 						{
 						},
 						"selection":
 						[
 							[
-								1035,
-								1035
+								213,
+								213
 							]
 						],
 						"settings":
 						{
-							"syntax": "Packages/JavaScript/JavaScript.tmLanguage",
-							"translate_tabs_to_spaces": false
+							"syntax": "Packages/Handlebars/grammars/Handlebars.tmLanguage"
 						},
 						"translation.x": 0.0,
-						"translation.y": 45.0,
+						"translation.y": 0.0,
 						"zoom_level": 1.0
 					},
 					"type": "text"
 				},
 				{
 					"buffer": 7,
-					"file": "app/routes/dashboard/invites/index.js",
+					"file": "app/controllers/dashboard/sessions/base.js",
 					"settings":
 					{
-						"buffer_size": 478,
+						"buffer_size": 1026,
 						"regions":
 						{
 						},
 						"selection":
 						[
 							[
-								460,
-								460
+								477,
+								477
 							]
 						],
 						"settings":
 						{
 							"syntax": "Packages/JavaScript/JavaScript.tmLanguage",
-							"translate_tabs_to_spaces": false
+							"tab_size": 2,
+							"translate_tabs_to_spaces": true
 						},
 						"translation.x": 0.0,
 						"translation.y": 0.0,
@@ -620,54 +620,26 @@
 				},
 				{
 					"buffer": 8,
-					"file": "app/routes/dashboard/facilities/index.js",
+					"file": "app/controllers/dashboard/sessions/add.js",
 					"settings":
 					{
-						"buffer_size": 490,
+						"buffer_size": 1216,
 						"regions":
 						{
 						},
 						"selection":
 						[
 							[
-								409,
-								409
+								1216,
+								1216
 							]
 						],
 						"settings":
 						{
-							"syntax": "Packages/JavaScript/JavaScript.tmLanguage",
-							"translate_tabs_to_spaces": false
+							"syntax": "Packages/JavaScript/JavaScript.tmLanguage"
 						},
 						"translation.x": 0.0,
 						"translation.y": 0.0,
-						"zoom_level": 1.0
-					},
-					"type": "text"
-				},
-				{
-					"buffer": 9,
-					"file": "app/routes/dashboard/trainers/add.js",
-					"settings":
-					{
-						"buffer_size": 1860,
-						"regions":
-						{
-						},
-						"selection":
-						[
-							[
-								1713,
-								1713
-							]
-						],
-						"settings":
-						{
-							"syntax": "Packages/JavaScript/JavaScript.tmLanguage",
-							"translate_tabs_to_spaces": false
-						},
-						"translation.x": 0.0,
-						"translation.y": 225.0,
 						"zoom_level": 1.0
 					},
 					"type": "text"
