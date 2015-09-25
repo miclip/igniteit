@@ -18,9 +18,5 @@ validations: {
     	presence: {message: " Must select an organization"},
     },
 },
-organizationName:function(){
-  this.store.findRecord('organization',this.get('model.organizationId')).then((organization)=>{
-    return organization.get('name');
-  });
-}.property('model.organizationId')
+
 });

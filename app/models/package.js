@@ -6,6 +6,7 @@ export default DS.Model.extend({
   rate: DS.belongsTo('rate',{async:true}),	
   discount: DS.attr('number'),
   organizationId: DS.attr('string'),
+  organization: DS.belongsTo('organization',{async:true}),
   numberOfSessions : DS.attr('number'),
   owner: DS.attr('string'),
   createdDate: DS.attr('date', {

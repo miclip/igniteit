@@ -5,6 +5,7 @@ export default DS.Model.extend({
   userId: DS.attr('string'),
   address: DS.belongsTo('address',{async:true}),	
   organizationId: DS.attr('string'),
+  organization: DS.belongsTo('organization',{async:true}),
   image: DS.attr('string'),
   owner: DS.attr('string'),
   invite: DS.belongsTo('invite',{async:true}),
