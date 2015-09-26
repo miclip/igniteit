@@ -1,22 +1,11 @@
-{{outlet}}	
-<div class="row">
-  {{#each model as |session|}}
-    <div class="col-md-5 col-lg-4">
-    	<div class="card card-inverse card-session">
-        <div class="card-block">
-          <div class="card-edits  card-session">
-            {{#link-to 'dashboard.sessions.edit' session.id class="btn"}}<i class="fa fa-edit" tooltip="Edit Session"></i>{{/link-to}}
-            <a class="btn" {{action 'showModal' 'confirm-delete' session}}><i class="fa fa-trash" tooltip="Delete Session"></i></a>
-          </div>
-          <h7 class="card-title">{{session.organization.name}}</h7>
-          <h3 class="card-title">{{session.name}}</h3>
-        </div>
-         
-        <div class="card-block">
-       
-        </div>
-      </div>
-    </div>
-  {{/each}}
-</div>
+{{outlet}}
+
+{{as-calendar
+  title="Ember Calendar"
+  occurrences=occurrences
+  defaultTimeZoneQuery="New York|London|Dubai|Hong Kong"
+  dayStartingTime="9:00"
+  dayEndingTime="18:00"
+  timeSlotDuration="00:30"
+  }}
 

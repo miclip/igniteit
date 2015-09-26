@@ -1,0 +1,39 @@
+.as-calendar-header {
+  @extend %row;
+
+  //background-color: $ghost;
+  border-bottom: 1px solid ;
+
+  nav,
+  h1 {
+    line-height: $line-height;
+  }
+
+  h1 {
+    @extend %col-md-6;
+  }
+
+  nav {
+    @extend %col-md-6;
+
+    text-align: right;
+
+    > ul {
+      @extend %btn-group;
+
+      > li {
+        padding: 1 / 4 0;
+      }
+    }
+
+    
+
+    .current-week {
+      &:disabled {
+        color: $global-section-border-color;
+      }
+    }
+
+   
+  }
+}

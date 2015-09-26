@@ -14,7 +14,6 @@ module.exports = function(defaults) {
   });
 
   app.import(app.bowerDirectory + '/bootstrap/dist/js/bootstrap.js');
-  //app.import(app.bowerDirectory + '/select2/dist/js/select2.full.js');
   app.import(app.bowerDirectory + '/JavaScript-MD5/js/md5.js');
   app.import(app.bowerDirectory + '/imgLiquid/js/imgLiquid.js');
  
