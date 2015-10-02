@@ -4,6 +4,7 @@ import EmberValidations from 'ember-validations';
 
 export default Ember.Controller.extend(EmberValidations,{
 hasValidationErrors: false,
+contentTimezones: null,
 validationModel: Ember.computed.alias('model'),
 validations: {
     'validationModel.email': {

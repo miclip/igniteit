@@ -1,4 +1,5 @@
 import AuthBase from '../authenticated-base';
+import moment from 'moment';
 
 export default AuthBase.extend({
 	setupController:function(controller, model){
@@ -6,10 +7,10 @@ export default AuthBase.extend({
     var self = this;
 		var uid = self.get('session').get('currentUser').get('id');
 		self.store.findRecord('user',uid).then((user)=>{
+			 controller.set('userTimeZone', user.get('timezone') || "America/New_York" );
 		 	 user.get('organizations').then((organizations)=>{
-		 	 		var options = [];
-		 	 		organizations.forEach(function(org){
-		 	 				options.push({id:org.id,text:org.get('name')});
+		 	 		var options = organizations.map((org)=>{
+		 	 				return {id:org.id,text:org.get('name')};
 		 	 		});
 		 	    controller.set('userOrganizations', options);
 		 	});

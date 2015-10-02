@@ -7,6 +7,7 @@ export default DS.Model.extend({
   password: DS.attr('string'),
   passwordConfirmation: DS.attr('string'),
   deleted: DS.attr('boolean', {defaultValue:false}),
+  timezone :DS.attr('string'),
   deletedDate: DS.attr('date'),
   createdDate: DS.attr('date', {
     defaultValue() { return new Date(); }
