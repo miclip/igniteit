@@ -27,34 +27,37 @@ actions:{
 	    			self.store.findRecord('organization',model.get('organizationId')).then((org)=>{
 	    				org.get('clients').pushObject(model);
 	    				org.save();
+
+	    				model.set('organization', org);
+	    				model.save();
 	    					    				
+							model.get('invite').then((invite)=>{
+								console.log("inviteEmail:"+invite.get('email'));
+								if(invite.get('email')){
+								invite.set('parentId',model.id);
+								invite.set('organization',org);
+								invite.set('name',model.get('name'));
+								invite.save();
+								
+								//TODO Send Invite Email
+
+								invite.set('emailSent', true);
+								invite.set('emailSentDate', new Date());
+								invite.save();
+	
+								self.notifications.addNotification({
+						      message: 'Invite Email Sent!',
+						      type: 'success',
+						      autoClear: true,
+					    	});
+
+
+								} else {
 									model.get('invite').then((invite)=>{
-										console.log("inviteEmail:"+invite.get('email'));
-										if(invite.get('email')){
-										invite.set('parentId',model.id);
-										invite.set('organization',org);
-										invite.set('name',model.get('name'));
-										invite.save();
-										
-										//TODO Send Invite Email
-
-										invite.set('emailSent', true);
-										invite.set('emailSentDate', new Date());
-										invite.save();
-			
-										self.notifications.addNotification({
-								      message: 'Invite Email Sent!',
-								      type: 'success',
-								      autoClear: true,
-							    	});
-
-
-										} else {
-											model.get('invite').then((invite)=>{
-												invite.destroyRecord();
-											});
-										}
+										invite.destroyRecord();
 									});
+								}
+							});
 							
 							
 	    			});	    			

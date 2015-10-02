@@ -1,0 +1,3 @@
+{{#modal-medium model=model title='Add Session'  ok='saveSession' okText='Save' okClass="btn-primary" close='removeModal'}}
+	{{session-edit model=model actionName='Add' contentRates=userOrganizationRates contentFacilities=userOrganizationFacilities contentClients=userOrganizationClients contentTrainers=userOrganizationTrainers content=userOrganizations hasValidationErrors=hasValidationErrors errors=errors}}
+{{/modal-medium}}

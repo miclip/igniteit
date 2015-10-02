@@ -4,8 +4,32 @@
 		"selected_items":
 		[
 			[
+				"ex",
+				"extend"
+			],
+			[
+				"oc",
+				"occurrence"
+			],
+			[
+				"pro",
+				"properties"
+			],
+			[
 				"or",
-				"organizationId"
+				"occurrence"
+			],
+			[
+				"se",
+				"selections"
+			],
+			[
+				"marg",
+				"margin-right"
+			],
+			[
+				"rate",
+				"rateId"
 			],
 			[
 				"o",
@@ -108,42 +132,10 @@
 	"buffers":
 	[
 		{
-			"file": "app/models/training-session.js",
+			"file": "app/controllers/dashboard/sessions.js",
 			"settings":
 			{
-				"buffer_size": 763,
-				"line_ending": "Windows"
-			}
-		},
-		{
-			"file": "app/routes/dashboard/sessions/index.js",
-			"settings":
-			{
-				"buffer_size": 428,
-				"line_ending": "Unix"
-			}
-		},
-		{
-			"file": "app/models/user.js",
-			"settings":
-			{
-				"buffer_size": 972,
-				"line_ending": "Windows"
-			}
-		},
-		{
-			"file": "app/models/organization.js",
-			"settings":
-			{
-				"buffer_size": 578,
-				"line_ending": "Windows"
-			}
-		},
-		{
-			"file": "app/templates/dashboard/sessions/index.hbs",
-			"settings":
-			{
-				"buffer_size": 761,
+				"buffer_size": 1332,
 				"line_ending": "Unix"
 			}
 		},
@@ -151,32 +143,24 @@
 			"file": "app/templates/dashboard/sessions.hbs",
 			"settings":
 			{
-				"buffer_size": 359,
+				"buffer_size": 391,
 				"line_ending": "Unix"
 			}
 		},
 		{
-			"file": "app/templates/dashboard/sessions/add.hbs",
+			"file": "app/routes/dashboard/sessions.js",
 			"settings":
 			{
-				"buffer_size": 213,
+				"buffer_size": 289,
 				"line_ending": "Unix"
 			}
 		},
 		{
-			"file": "app/controllers/dashboard/sessions/base.js",
+			"file": "app/templates/dashboard/organizations.hbs",
 			"settings":
 			{
-				"buffer_size": 1026,
+				"buffer_size": 363,
 				"line_ending": "Windows"
-			}
-		},
-		{
-			"file": "app/controllers/dashboard/sessions/add.js",
-			"settings":
-			{
-				"buffer_size": 1216,
-				"line_ending": "Unix"
 			}
 		}
 	],
@@ -232,6 +216,36 @@
 	},
 	"file_history":
 	[
+		"/C/Projects/Ember/igniteit/app/templates/dashboard/organizations.hbs",
+		"/C/Projects/Ember/igniteit/app/templates/dashboard/sessions/save-session.hbs",
+		"/C/Projects/Ember/igniteit/app/routes/dashboard/sessions.js",
+		"/C/Projects/Ember/igniteit/app/styles/ember-calendar/components/as-calendar/_header.scss",
+		"/C/Projects/Ember/igniteit/app/templates/components/modal-medium.hbs",
+		"/C/Projects/Ember/igniteit/app/components/modal-medium.js",
+		"/C/Projects/Ember/igniteit/node_modules/ember-calendar/app/templates/components/as-calendar/timetable.hbs",
+		"/C/Projects/Ember/igniteit/node_modules/ember-calendar/app/templates/components/as-calendar/header.hbs",
+		"/C/Projects/Ember/igniteit/app/styles/ember-calendar/components/as-calendar/_time-zone-select.scss",
+		"/C/Projects/Ember/igniteit/app/styles/_custom-variables.scss",
+		"/C/Projects/Ember/igniteit/app/styles/ember-calendar/components/_as-calendar.scss",
+		"/C/Projects/Ember/igniteit/app/styles/ember-calendar/components/as-calendar/_timetable.scss",
+		"/C/Projects/Ember/igniteit/app/styles/ember-calendar/main.scss",
+		"/C/Projects/Ember/igniteit/bower_components/bootstrap/scss/_dropdown.scss",
+		"/C/Projects/Ember/igniteit/app/templates/dashboard/sessions/index.hbs",
+		"/C/Projects/Ember/igniteit/app/templates/dashboard/sessions.hbs",
+		"/C/Projects/Ember/igniteit/app/styles/ember-calendar/components/as-calendar/_occurrence.scss",
+		"/C/Projects/Ember/igniteit/app/styles/ember-calendar/components/as-calendar/timetable/_occurrence.scss",
+		"/C/Projects/Ember/igniteit/app/controllers/dashboard/sessions.js",
+		"/C/Projects/Ember/igniteit/app/styles/ember-calendar/components/as-calendar/_time-zone-option.scss",
+		"/C/Projects/Ember/igniteit/node_modules/ember-calendar/package.json",
+		"/C/Projects/Ember/igniteit/app/controllers/dashboard/sessions/base.js",
+		"/C/Projects/Ember/igniteit/app/models/training-session.js",
+		"/C/Projects/Ember/igniteit/app/routes/dashboard/sessions/add.js",
+		"/C/Projects/Ember/igniteit/app/templates/components/session-edit.hbs",
+		"/C/Projects/Ember/igniteit/app/routes/dashboard/sessions/index.js",
+		"/C/Projects/Ember/igniteit/app/models/user.js",
+		"/C/Projects/Ember/igniteit/app/models/organization.js",
+		"/C/Projects/Ember/igniteit/app/templates/dashboard/sessions/add.hbs",
+		"/C/Projects/Ember/igniteit/app/controllers/dashboard/sessions/add.js",
 		"/C/Projects/Ember/igniteit/app/templates/components/session-edit.js",
 		"/C/Projects/Ember/igniteit/app/models/rate.js",
 		"/C/Projects/Ember/igniteit/app/templates/dashboard/rates/index.hbs",
@@ -257,8 +271,6 @@
 		"/C/Projects/Ember/igniteit/app/routes/dashboard/packages/edit.js",
 		"/C/Projects/Ember/igniteit/app/templates/dashboard/packages/edit.hbs",
 		"/C/Projects/Ember/igniteit/app/templates/dashboard/packages/index.hbs",
-		"/C/Projects/Ember/igniteit/app/models/user.js",
-		"/C/Projects/Ember/igniteit/app/models/organization.js",
 		"/C/Projects/Ember/igniteit/app/routes/authenticated-user.js",
 		"/C/Projects/Ember/igniteit/app/routes/application.js",
 		"/C/Projects/Ember/igniteit/app/components/img-liquid.js",
@@ -331,35 +343,7 @@
 		"/C/Projects/Ember/igniteit/app/routes/account/delete.js",
 		"/C/Projects/Ember/igniteit/app/controllers/dashboard/facilities.js",
 		"/C/Projects/Ember/igniteit/app/routes/dashboard/facilities.js",
-		"/C/Projects/Ember/igniteit/app/controllers/dashboard/organizations/base.js",
-		"/C/Projects/Ember/igniteit/app/controllers/dashboard/facilities/add.js",
-		"/C/Projects/Ember/igniteit/app/controllers/dashboard/facilities/edit.js",
-		"/C/Projects/Ember/igniteit/app/controllers/dashboard/organizations/add.js",
-		"/C/Projects/Ember/igniteit/app/controllers/dashboard/organizations/edit.js",
-		"/C/Projects/Ember/igniteit/app/models/base.js",
-		"/C/Projects/Ember/igniteit/app/controllers/dashboard/facilities/facility-base.js",
-		"/C/Projects/Ember/igniteit/app/controllers/dashboard/organizations/organization-base.js",
-		"/C/Projects/Ember/igniteit/app/routes/dashboard/facilities/edit.js",
-		"/C/Projects/Ember/igniteit/app/templates/dashboard/facilities/edit.hbs",
-		"/C/Projects/Ember/igniteit/app/templates/dashboard/facilities/index.hbs",
-		"/C/Projects/Ember/igniteit/app/templates/components/modal-small.hbs",
-		"/C/Projects/Ember/igniteit/app/templates/components/facility-edit.hbs",
-		"/C/Projects/Ember/igniteit/app/models/address.js",
-		"/C/Projects/Ember/igniteit/app/components/validated-select2-group.js",
-		"/C/Projects/Ember/igniteit/app/templates/dashboard/facilities/add.hbs",
-		"/C/Projects/Ember/igniteit/app/templates/dashboard/organizations/add.hbs",
-		"/C/Projects/Ember/igniteit/app/components/validated-input-group.js",
-		"/C/Projects/Ember/igniteit/app/styles/_select2-flat.scss",
-		"/C/Projects/Ember/igniteit/app/styles/app.scss",
-		"/C/Projects/Ember/igniteit/app/routes/dashboard/organizations/index.js",
-		"/C/Projects/Ember/igniteit/app/templates/components/organization-edit.hbs",
-		"/C/Projects/Ember/igniteit/app/components/organization-edit.js",
-		"/C/Projects/Ember/igniteit/app/templates/dashboard/organizations/edit.hbs",
-		"/C/Projects/Ember/igniteit/app/components/select-2.js",
-		"/C/Projects/Ember/igniteit/bower.json",
-		"/C/Projects/Ember/igniteit/app/index.html",
-		"/C/Projects/Ember/igniteit/package.json",
-		"/C/Projects/Ember/igniteit/node_modules/ember-select-2/index.js"
+		"/C/Projects/Ember/igniteit/app/controllers/dashboard/organizations/base.js"
 	],
 	"find":
 	{
@@ -399,30 +383,28 @@
 	"groups":
 	[
 		{
-			"selected": 8,
 			"sheets":
 			[
 				{
 					"buffer": 0,
-					"file": "app/models/training-session.js",
+					"file": "app/controllers/dashboard/sessions.js",
 					"settings":
 					{
-						"buffer_size": 763,
+						"buffer_size": 1332,
 						"regions":
 						{
 						},
 						"selection":
 						[
 							[
-								244,
-								244
+								340,
+								340
 							]
 						],
 						"settings":
 						{
 							"syntax": "Packages/JavaScript/JavaScript.tmLanguage",
-							"tab_size": 2,
-							"translate_tabs_to_spaces": true
+							"translate_tabs_to_spaces": false
 						},
 						"translation.x": 0.0,
 						"translation.y": 0.0,
@@ -432,23 +414,25 @@
 				},
 				{
 					"buffer": 1,
-					"file": "app/routes/dashboard/sessions/index.js",
+					"file": "app/templates/dashboard/sessions.hbs",
 					"settings":
 					{
-						"buffer_size": 428,
+						"buffer_size": 391,
 						"regions":
 						{
 						},
 						"selection":
 						[
 							[
-								333,
-								349
+								326,
+								326
 							]
 						],
 						"settings":
 						{
-							"syntax": "Packages/JavaScript/JavaScript.tmLanguage"
+							"syntax": "Packages/Handlebars/grammars/Handlebars.tmLanguage",
+							"tab_size": 2,
+							"translate_tabs_to_spaces": true
 						},
 						"translation.x": 0.0,
 						"translation.y": 0.0,
@@ -458,25 +442,23 @@
 				},
 				{
 					"buffer": 2,
-					"file": "app/models/user.js",
+					"file": "app/routes/dashboard/sessions.js",
 					"settings":
 					{
-						"buffer_size": 972,
+						"buffer_size": 289,
 						"regions":
 						{
 						},
 						"selection":
 						[
 							[
-								948,
-								948
+								240,
+								240
 							]
 						],
 						"settings":
 						{
-							"syntax": "Packages/JavaScript/JavaScript.tmLanguage",
-							"tab_size": 2,
-							"translate_tabs_to_spaces": true
+							"syntax": "Packages/JavaScript/JavaScript.tmLanguage"
 						},
 						"translation.x": 0.0,
 						"translation.y": 0.0,
@@ -486,157 +468,23 @@
 				},
 				{
 					"buffer": 3,
-					"file": "app/models/organization.js",
+					"file": "app/templates/dashboard/organizations.hbs",
 					"settings":
 					{
-						"buffer_size": 578,
+						"buffer_size": 363,
 						"regions":
 						{
 						},
 						"selection":
 						[
 							[
-								554,
-								554
-							]
-						],
-						"settings":
-						{
-							"syntax": "Packages/JavaScript/JavaScript.tmLanguage",
-							"tab_size": 2,
-							"translate_tabs_to_spaces": true
-						},
-						"translation.x": 0.0,
-						"translation.y": 0.0,
-						"zoom_level": 1.0
-					},
-					"type": "text"
-				},
-				{
-					"buffer": 4,
-					"file": "app/templates/dashboard/sessions/index.hbs",
-					"settings":
-					{
-						"buffer_size": 761,
-						"regions":
-						{
-						},
-						"selection":
-						[
-							[
-								759,
-								759
+								277,
+								277
 							]
 						],
 						"settings":
 						{
 							"syntax": "Packages/Handlebars/grammars/Handlebars.tmLanguage"
-						},
-						"translation.x": 0.0,
-						"translation.y": 0.0,
-						"zoom_level": 1.0
-					},
-					"type": "text"
-				},
-				{
-					"buffer": 5,
-					"file": "app/templates/dashboard/sessions.hbs",
-					"settings":
-					{
-						"buffer_size": 359,
-						"regions":
-						{
-						},
-						"selection":
-						[
-							[
-								81,
-								81
-							]
-						],
-						"settings":
-						{
-							"syntax": "Packages/Handlebars/grammars/Handlebars.tmLanguage"
-						},
-						"translation.x": 0.0,
-						"translation.y": 0.0,
-						"zoom_level": 1.0
-					},
-					"type": "text"
-				},
-				{
-					"buffer": 6,
-					"file": "app/templates/dashboard/sessions/add.hbs",
-					"settings":
-					{
-						"buffer_size": 213,
-						"regions":
-						{
-						},
-						"selection":
-						[
-							[
-								213,
-								213
-							]
-						],
-						"settings":
-						{
-							"syntax": "Packages/Handlebars/grammars/Handlebars.tmLanguage"
-						},
-						"translation.x": 0.0,
-						"translation.y": 0.0,
-						"zoom_level": 1.0
-					},
-					"type": "text"
-				},
-				{
-					"buffer": 7,
-					"file": "app/controllers/dashboard/sessions/base.js",
-					"settings":
-					{
-						"buffer_size": 1026,
-						"regions":
-						{
-						},
-						"selection":
-						[
-							[
-								477,
-								477
-							]
-						],
-						"settings":
-						{
-							"syntax": "Packages/JavaScript/JavaScript.tmLanguage",
-							"tab_size": 2,
-							"translate_tabs_to_spaces": true
-						},
-						"translation.x": 0.0,
-						"translation.y": 0.0,
-						"zoom_level": 1.0
-					},
-					"type": "text"
-				},
-				{
-					"buffer": 8,
-					"file": "app/controllers/dashboard/sessions/add.js",
-					"settings":
-					{
-						"buffer_size": 1216,
-						"regions":
-						{
-						},
-						"selection":
-						[
-							[
-								1216,
-								1216
-							]
-						],
-						"settings":
-						{
-							"syntax": "Packages/JavaScript/JavaScript.tmLanguage"
 						},
 						"translation.x": 0.0,
 						"translation.y": 0.0,
@@ -703,6 +551,6 @@
 	"show_open_files": false,
 	"show_tabs": true,
 	"side_bar_visible": true,
-	"side_bar_width": 238.0,
+	"side_bar_width": 310.0,
 	"status_bar_visible": true
 }

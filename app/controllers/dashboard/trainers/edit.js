@@ -25,6 +25,9 @@ actions:{
 				    			
 			    				org.get('trainers').pushObject(model);
 			    				org.save();   
+
+			    				model.set('organization', org);
+	    						model.save();
 	    					} 
 		    				
 		    				model.get('invite').then((invite)=>{

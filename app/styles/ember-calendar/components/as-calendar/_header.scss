@@ -1,36 +1,50 @@
 .as-calendar-header {
-  @extend %row;
+  @extend .row;
+  margin-left: 0;
+  margin-right: 0;
+  border-bottom: 1px solid;
 
-  //background-color: $ghost;
-  border-bottom: 1px solid ;
+  .week-button-group{
+    @extend .btn-group;
+  }
 
   nav,
   h1 {
-    line-height: $line-height;
+    line-height: $line-height-sm;
   }
 
   h1 {
-    @extend %col-md-6;
+    @extend .col-md-6;
   }
 
   nav {
-    @extend %col-md-6;
+    @extend .col-md-6;
 
     text-align: right;
 
     > ul {
-      @extend %btn-group;
+     // @extend .btn-group;
 
       > li {
-        padding: 1 / 4 0;
+        padding: $grid-gutter-width / 4 0;
       }
     }
 
-    
+    .next-week{
+      @extend .btn;
+      @include icon(chevron-right);
+      line-height: 1.5rem;
+    }
+    .previous-week{
+      @extend .btn;
+      @include icon(chevron-left);
+      line-height: 1.5rem;
+    }
 
     .current-week {
+      @extend .btn;
       &:disabled {
-        color: $global-section-border-color;
+        @extend .disabled
       }
     }
 

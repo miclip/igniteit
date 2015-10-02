@@ -11,8 +11,21 @@
     optionValuePath="id" optionLabelPath="text"
     placeholder="Choose Client" required="true" name="client"  hasValidationErrors=hasValidationErrors labelText="Select Client:" value=model.clientId errors=errors.validationModel.clientId allowClear=true}}
 
+    <div class="row">
+	<div class="col-md-6">
+			{{validated-select2-group content=contentFacilities
+    optionValuePath="id" optionLabelPath="text"
+    placeholder="Choose Facility" required="true" name="facilityId" hasValidationErrors=hasValidationErrors labelText="Select Facility:" value=model.facilityId errors=errors.validationModel.facilityId allowClear=true}}
+	</div>
+	<div class="col-md-6">
+	{{validated-select2-group content=contentTrainers
+    optionValuePath="id" optionLabelPath="text"
+    placeholder="Choose Trainer" required="true" name="trainerId" hasValidationErrors=hasValidationErrors labelText="Select Trainer:" value=model.trainerId errors=errors.validationModel.trainerId allowClear=true}}
+	</div>
+</div>
  <div class="row">
 	<div class="col-md-6">
+		{{!-- {{bs-datetimepicker date=sessionDateTime dateIcon="fa fa-calendar" icons=faicons}} --}}
 			{{validated-input-group type="text" placeholder="Select Date" required="true" name="discount" hasValidationErrors=hasValidationErrors labelText="Select Date & Time:" value=model.sessionDateTime errors=errors.validationModel.sessionDateTime}}
 	</div>
 	<div class="col-md-6">
@@ -32,9 +45,4 @@
 		{{validated-input-group type="text" placeholder="Enter # of Sessions" required="true" name="numberOfSessions" hasValidationErrors=hasValidationErrors labelText="Number of sessions:" value=model.numberOfSessions errors=errors.validationModel.numberOfSessions}}
 	</div>
 </div>
-
-
-<p>
-	<button class="btn btn-primary" type='submit'>Save Session</button>
-{{#link-to "dashboard.sessions" class="btn btn-link"}}Cancel{{/link-to}}
-</p>			
+			

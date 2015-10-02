@@ -27,6 +27,9 @@ actions:{
 	    			self.store.findRecord('organization',model.get('organizationId')).then((org)=>{
 	    				org.get('trainers').pushObject(model);
 	    				org.save();
+
+	    				model.set('organization', org);
+	    				model.save();
 	    					    				
 									model.get('invite').then((invite)=>{
 										console.log("inviteEmail:"+invite.get('email'));

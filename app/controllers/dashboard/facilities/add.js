@@ -25,6 +25,9 @@ actions:{
 	    			self.store.findRecord('organization',model.get('organizationId')).then((org)=>{
 	    				org.get('facilities').pushObject(model);
 	    				org.save();
+
+	    				model.set('organization', org);
+	    				model.save();
 	    			});	    			
 
 						self.set('addSuccess', true);

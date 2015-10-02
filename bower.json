@@ -2,6 +2,7 @@
   "name": "igniteit",
   "dependencies": {
     "bootstrap": "~4.0.0-alpha",
+    "bootstrap-datetimepicker": "~0.0.11",
     "bootstrap-switch": "~3.3.1",
     "ember": "^2.0.0",
     "ember-cli-shims": "ember-cli/ember-cli-shims#0.0.4",

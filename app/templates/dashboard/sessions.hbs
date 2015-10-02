@@ -1,18 +1,17 @@
-<div class="row">
-<div class="col-md-12">
-<div class="page-header">
-	<h1>Sessions</h1> 
-	<span class="page-header-controls col-xs-offset-1 col-sm-offset-2">
-		{{#link-to "dashboard.sessions.add" class="btn btn-primary"}}<i class="fa fa-plus"></i>{{/link-to}}
-	</span>
+{{as-calendar
+  title="Sessions"
+  occurrences=occurrences
+  timeZone="New York"
+  dayStartingTime="9:00"
+  dayEndingTime="18:00"
+  timeSlotDuration="00:30"
+  showTimeZoneSearch=false
+  onAddOccurrence="calendarAddOccurrence"
+  onUpdteOccurrence="calendarUpdateOccurrence"
+  onRemoveOccurrence="calendarRemoveOccurrence"
+  }}
 
-</div>
-	
-	
-</div>
-</div>
 <div class="page-content">
 {{outlet}}
 {{outlet 'modal'}}
 </div>
-

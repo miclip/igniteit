@@ -1,9 +1,9 @@
-.as-calendar-occurrence {
-  background-color: rgba($alert-color, .8);
-  border-left: 2px solid darken($alert-color, 5%);
+  .as-calendar-occurrence {
+  background-color: rgba($brand-warning, .8);
+  border-left: 2px solid darken($brand-warning, 5%);
   color: $white;
   left: 0;
-  padding: 0 $column-gutter / 4;
+  padding: 0 $grid-gutter-width / 4;
   position: absolute;
   right: 0;
 

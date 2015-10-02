@@ -25,7 +25,10 @@ actions:{
 	    			
 	    			self.store.findRecord('organization',model.get('organizationId')).then((org)=>{
     					org.get('packages').pushObject(model);
-    					org.save();   
+    					org.save();  
+
+    					model.set('organization', org);
+	    				model.save(); 
     				});
 	    		}  	
 

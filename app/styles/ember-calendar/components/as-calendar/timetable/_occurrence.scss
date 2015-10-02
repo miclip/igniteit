@@ -2,7 +2,7 @@
   .resize-handle {
     bottom: 0;
     cursor: ns-resize;
-    height: rem-calc(8);
+    height: 1rem;
     left: 0;
     position: absolute;
     right: 0;
@@ -15,19 +15,19 @@
   }
 
   .remove {
-    @include single-transition(color, 150ms);
-    @include single-transition(opacity, 150ms);
+    @include transition(color, 150ms);
+    @include transition(opacity, 150ms);
     @include icon(times);
 
     color: $white;
     opacity: 0;
     position: absolute;
     right: 0;
-    top: $column-gutter / 8;
+    top: $grid-gutter-width / 8;
 
     &:hover {
       background-color: transparent;
-      color: darken($alert-color, 10%);
+      color: darken($brand-warning, 10%);
     }
   }
 }

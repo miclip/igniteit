@@ -16,5 +16,15 @@ $font-stack: Helvetica Neue, Lato, Helvetica, Arial, Verdana, Lucida Grande, san
 
 // paint 
 $global-section-border-color: #ececec !default;
-$dropdown-background-color: $white !default;
-$dropdown-border-color: $white !default;
+$dropdown-background-color: $gray ;
+$dropdown-border-color: $gray ;
+$anchor-font-color: $gray;
+$small-font-color: $gray;
+$font-weight-bold: 400 !default;
+$font-weight-extrabold: 600 !default;
+$font-weight-normal: 300 !default;
+
+@mixin icon($name) {
+	  @include fa-icon;
+	  @extend .fa-#{$name};
+	}

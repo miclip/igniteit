@@ -1,17 +1,19 @@
 .as-calendar-timetable {
   .header.columns,
   > .content-wrapper {
-    @extend %grid-row;
+    @extend .row;
+    margin-left: 0;
+    margin-right: 0;
   }
 
   .header.rows,
   .time-zone {
-    @extend %grid-column-1;
+    @extend .col-md-1;
   }
 
   .day-labels,
   > .content-wrapper > .content {
-    @extend %grid-column-11;
+    @extend .col-md-11;
   }
 
   .header.rows,
@@ -27,7 +29,7 @@
   .time-slot-labels > ul > li,
   .as-calendar-time-zone-select,
   .day-labels > ul > li {
-    padding: $column-gutter / 4 0;
+    padding: $grid-gutter-width / 4 0;
   }
 
   .header {
